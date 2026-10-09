@@ -1,0 +1,10 @@
+^D:\AHEXATRADER\2026.10.08 SRP\BUILD\CMAKEFILES\C7A25470C2AC6FF90DEC1E2B7F946935\GENERATE.STAMP.RULE
+setlocal
+D:\CMake\bin\cmake.exe "-SD:/AHexaTrader/2026.10.08 SRP" "-BD:/AHexaTrader/2026.10.08 SRP/build" --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file "D:/AHexaTrader/2026.10.08 SRP/build/srp.slnx"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

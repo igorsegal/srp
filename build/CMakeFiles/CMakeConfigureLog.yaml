@@ -1,0 +1,1425 @@
+
+---
+events:
+  -
+    kind: "message-v1"
+    backtrace:
+      - "D:/CMake/share/cmake-4.4/Modules/CMakeDetermineSystem.cmake:218 (message)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      The system is: Windows - 10.0.22621 - AMD64
+  -
+    kind: "find-v1"
+    backtrace:
+      - "D:/CMake/share/cmake-4.4/Modules/CMakeDetermineCompilerId.cmake:501 (find_file)"
+      - "D:/CMake/share/cmake-4.4/Modules/CMakeDetermineCompilerId.cmake:538 (CMAKE_DETERMINE_COMPILER_ID_WRITE)"
+      - "D:/CMake/share/cmake-4.4/Modules/CMakeDetermineCompilerId.cmake:8 (CMAKE_DETERMINE_COMPILER_ID_BUILD)"
+      - "D:/CMake/share/cmake-4.4/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "D:/CMake/share/cmake-4.4/Modules/CMakeDetermineCCompiler.cmake:122 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:2 (project)"
+    mode: "file"
+    variable: "src_in"
+    description: "Path to a file."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "CMakeCCompilerId.c.in"
+    candidate_directories:
+      - "D:/CMake/share/cmake-4.4/Modules/"
+    found: "D:/CMake/share/cmake-4.4/Modules/CMakeCCompilerId.c.in"
+    search_context:
+      ENV{PATH}:
+        - "D:\\Python311\\Scripts\\"
+        - "D:\\Python311\\"
+        - "C:\\Python314\\Scripts\\"
+        - "C:\\Python314\\"
+        - "D:\\Python313\\Scripts\\"
+        - "D:\\Python313\\"
+        - "C:\\Windows\\system32"
+        - "C:\\Windows"
+        - "C:\\Windows\\System32\\Wbem"
+        - "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\Windows\\System32\\OpenSSH\\"
+        - "C:\\Program Files\\dotnet\\"
+        - "C:\\Program Files\\Microsoft SQL Server\\150\\Tools\\Binn\\"
+        - "C:\\Program Files\\PowerShell\\7\\"
+        - "D:\\! HexaTrade\\Git\\cmd"
+        - "D:\\nodejs\\"
+        - "C:\\ProgramData\\chocolatey\\bin"
+        - "D:\\Windows Kits\\10\\Windows Performance Toolkit\\"
+        - "D:\\CMake\\bin"
+        - "D:\\Git\\cmd"
+        - "D:\\ffmpeg\\"
+        - "D:\\GitHub CLI\\"
+        - "C:\\Users\\user\\AppData\\Local\\hermes\\hermes-agent\\venv\\Scripts"
+        - "C:\\Users\\user\\AppData\\Local\\hermes\\bin"
+        - "D:\\Ollama"
+        - "C:\\Users\\user\\AppData\\Roaming\\npm"
+        - "C:\\Users\\user\\AppData\\Local\\OpenClaw\\deps\\portable-git\\mingw64\\bin"
+        - "C:\\Users\\user\\AppData\\Local\\OpenClaw\\deps\\portable-git\\usr\\bin"
+        - "C:\\Users\\user\\AppData\\Local\\Programs\\Ollama"
+  -
+    kind: "message-v1"
+    backtrace:
+      - "D:/CMake/share/cmake-4.4/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "D:/CMake/share/cmake-4.4/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "D:/CMake/share/cmake-4.4/Modules/CMakeDetermineCCompiler.cmake:122 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+      Compiler:  
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      0
+      Версия MSBuild 18.8.2+ce25c0108 для .NET Framework
+      Сборка начата 09.10.2026 10:51:21.
+      
+      Проект "D:\\AHexaTrader\\2026.10.08 SRP\\build\\CMakeFiles\\4.4.0\\CompilerIdC\\CompilerIdC.vcxproj" в узле 1 (целевые объекты по умолчанию).
+      PrepareForBuild:
+        Создание каталога "Debug\\".
+        Структурированный вывод включен. Форматирование диагностики компилятора будет отражать иерархию ошибок. Подробнее см. https://aka.ms/cpp/structured-output.
+        Создание каталога "Debug\\CompilerIdC.tlog\\".
+      InitializeBuildStatus:
+        Создание "Debug\\CompilerIdC.tlog\\unsuccessfulbuild", так как было задано "AlwaysCreate".
+        Обращение к "Debug\\CompilerIdC.tlog\\unsuccessfulbuild".
+      VcpkgTripletSelection:
+        Using triplet "x64-windows" from "D:\\vcpkg\\installed\\x64-windows\\"
+        Using normalized configuration "Release"
+      ClCompile:
+        D:\\Program Files\\Visual Studio\\VC\\Tools\\MSVC\\14.51.36231\\bin\\HostX64\\x64\\CL.exe /c /I"D:\\vcpkg\\installed\\x64-windows\\include" /nologo /W0 /WX- /diagnostics:column /Od /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"Debug\\\\" /Fd"Debug\\vc145.pdb" /external:W0 /Gd /TC /FC /errorReport:queue CMakeCCompilerId.c
+        CMakeCCompilerId.c
+      Link:
+        D:\\Program Files\\Visual Studio\\VC\\Tools\\MSVC\\14.51.36231\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:".\\CompilerIdC.exe" /INCREMENTAL:NO /NOLOGO /LIBPATH:"D:\\vcpkg\\installed\\x64-windows\\lib" /LIBPATH:"D:\\vcpkg\\installed\\x64-windows\\lib\\manual-link" kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib "D:\\vcpkg\\installed\\x64-windows\\lib\\*.lib" /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /PDB:".\\CompilerIdC.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:".\\CompilerIdC.lib" /MACHINE:X64 Debug\\CMakeCCompilerId.obj
+        CompilerIdC.vcxproj -> D:\\AHexaTrader\\2026.10.08 SRP\\build\\CMakeFiles\\4.4.0\\CompilerIdC\\CompilerIdC.exe
+      AppLocalFromInstalled:
+        pwsh.exe -ExecutionPolicy Bypass -noprofile -File "D:\\vcpkg\\scripts\\buildsystems\\msbuild\\applocal.ps1" "D:\\AHexaTrader\\2026.10.08 SRP\\build\\CMakeFiles\\4.4.0\\CompilerIdC\\CompilerIdC.exe" "D:\\vcpkg\\installed\\x64-windows\\bin" "Debug\\CompilerIdC.tlog\\CompilerIdC.write.1u.tlog" "Debug\\vcpkg.applocal.log"
+      PostBuildEvent:
+        for %%i in (cl.exe) do @echo CMAKE_C_COMPILER=%%~$PATH:i
+        :VCEnd
+        CMAKE_C_COMPILER=D:\\Program Files\\Visual Studio\\VC\\Tools\\MSVC\\14.51.36231\\bin\\Hostx64\\x64\\cl.exe
+      FinalizeBuildStatus:
+        Файл "Debug\\CompilerIdC.tlog\\unsuccessfulbuild" удаляется.
+        Обращение к "Debug\\CompilerIdC.tlog\\CompilerIdC.lastbuildstate".
+      Сборка проекта "D:\\AHexaTrader\\2026.10.08 SRP\\build\\CMakeFiles\\4.4.0\\CompilerIdC\\CompilerIdC.vcxproj" завершена (целевые объекты по умолчанию).
+      
+      Сборка успешно завершена.
+          Предупреждений: 0
+          Ошибок: 0
+      
+      Прошло времени 00:00:03.41
+      
+      
+      Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CompilerIdC.exe"
+      
+      Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CompilerIdC.vcxproj"
+      
+      The C compiler identification is MSVC, found in:
+        D:/AHexaTrader/2026.10.08 SRP/build/CMakeFiles/4.4.0/CompilerIdC/CompilerIdC.exe
+      
+  -
+    kind: "find-v1"
+    backtrace:
+      - "D:/CMake/share/cmake-4.4/Modules/CMakeFindBinUtils.cmake:37 (find_program)"
+      - "D:/CMake/share/cmake-4.4/Modules/CMakeFindBinUtils.cmake:64 (__resolve_tool_path)"
+      - "D:/CMake/share/cmake-4.4/Modules/CMakeFindBinUtils.cmake:102 (__resolve_linker_path)"
+      - "D:/CMake/share/cmake-4.4/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
+      - "CMakeLists.txt:2 (project)"
+    mode: "program"
+    variable: "_CMAKE_TOOL_WITH_PATH"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "link"
+    candidate_directories:
+      - "D:/Program Files/Visual Studio/VC/Tools/MSVC/14.51.36231/bin/Hostx64/x64/"
+      - "D:/Python311/Scripts/"
+      - "D:/Python311/"
+      - "C:/Python314/Scripts/"
+      - "C:/Python314/"
+      - "D:/Python313/Scripts/"
+      - "D:/Python313/"
+      - "C:/Windows/System32/"
+      - "C:/Windows/"
+      - "C:/Windows/System32/wbem/"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/"
+      - "C:/Windows/System32/OpenSSH/"
+      - "C:/Program Files/dotnet/"
+      - "C:/Program Files/Microsoft SQL Server/150/Tools/Binn/"
+      - "C:/Program Files/PowerShell/7/"
+      - "D:/! HexaTrade/Git/cmd/"
+      - "D:/nodejs/"
+      - "C:/ProgramData/chocolatey/bin/"
+      - "D:/Windows Kits/10/Windows Performance Toolkit/"
+      - "D:/CMake/bin/"
+      - "D:/Git/cmd/"
+      - "D:/ffmpeg/"
+      - "D:/GitHub CLI/"
+      - "C:/Users/user/AppData/Local/hermes/hermes-agent/venv/Scripts/"
+      - "C:/Users/user/AppData/Local/hermes/bin/"
+      - "D:/Ollama/"
+      - "C:/Users/user/AppData/Roaming/npm/"
+      - "C:/Users/user/AppData/Local/OpenClaw/deps/portable-git/mingw64/bin/"
+      - "C:/Users/user/AppData/Local/OpenClaw/deps/portable-git/usr/bin/"
+      - "C:/Users/user/AppData/Local/Programs/Ollama/"
+    searched_directories:
+      - "D:/Program Files/Visual Studio/VC/Tools/MSVC/14.51.36231/bin/Hostx64/x64/link.com"
+    found: "D:/Program Files/Visual Studio/VC/Tools/MSVC/14.51.36231/bin/Hostx64/x64/link.exe"
+    search_context:
+      ENV{PATH}:
+        - "D:\\Python311\\Scripts\\"
+        - "D:\\Python311\\"
+        - "C:\\Python314\\Scripts\\"
+        - "C:\\Python314\\"
+        - "D:\\Python313\\Scripts\\"
+        - "D:\\Python313\\"
+        - "C:\\Windows\\system32"
+        - "C:\\Windows"
+        - "C:\\Windows\\System32\\Wbem"
+        - "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\Windows\\System32\\OpenSSH\\"
+        - "C:\\Program Files\\dotnet\\"
+        - "C:\\Program Files\\Microsoft SQL Server\\150\\Tools\\Binn\\"
+        - "C:\\Program Files\\PowerShell\\7\\"
+        - "D:\\! HexaTrade\\Git\\cmd"
+        - "D:\\nodejs\\"
+        - "C:\\ProgramData\\chocolatey\\bin"
+        - "D:\\Windows Kits\\10\\Windows Performance Toolkit\\"
+        - "D:\\CMake\\bin"
+        - "D:\\Git\\cmd"
+        - "D:\\ffmpeg\\"
+        - "D:\\GitHub CLI\\"
+        - "C:\\Users\\user\\AppData\\Local\\hermes\\hermes-agent\\venv\\Scripts"
+        - "C:\\Users\\user\\AppData\\Local\\hermes\\bin"
+        - "D:\\Ollama"
+        - "C:\\Users\\user\\AppData\\Roaming\\npm"
+        - "C:\\Users\\user\\AppData\\Local\\OpenClaw\\deps\\portable-git\\mingw64\\bin"
+        - "C:\\Users\\user\\AppData\\Local\\OpenClaw\\deps\\portable-git\\usr\\bin"
+        - "C:\\Users\\user\\AppData\\Local\\Programs\\Ollama"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "D:/CMake/share/cmake-4.4/Modules/CMakeFindBinUtils.cmake:37 (find_program)"
+      - "D:/CMake/share/cmake-4.4/Modules/CMakeFindBinUtils.cmake:64 (__resolve_tool_path)"
+      - "D:/CMake/share/cmake-4.4/Modules/CMakeFindBinUtils.cmake:103 (__resolve_linker_path)"
+      - "D:/CMake/share/cmake-4.4/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
+      - "CMakeLists.txt:2 (project)"
+    mode: "program"
+    variable: "_CMAKE_TOOL_WITH_PATH"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "lld-link"
+    candidate_directories:
+      - "D:/Program Files/Visual Studio/VC/Tools/MSVC/14.51.36231/bin/Hostx64/x64/"
+      - "D:/Python311/Scripts/"
+      - "D:/Python311/"
+      - "C:/Python314/Scripts/"
+      - "C:/Python314/"
+      - "D:/Python313/Scripts/"
+      - "D:/Python313/"
+      - "C:/Windows/System32/"
+      - "C:/Windows/"
+      - "C:/Windows/System32/wbem/"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/"
+      - "C:/Windows/System32/OpenSSH/"
+      - "C:/Program Files/dotnet/"
+      - "C:/Program Files/Microsoft SQL Server/150/Tools/Binn/"
+      - "C:/Program Files/PowerShell/7/"
+      - "D:/! HexaTrade/Git/cmd/"
+      - "D:/nodejs/"
+      - "C:/ProgramData/chocolatey/bin/"
+      - "D:/Windows Kits/10/Windows Performance Toolkit/"
+      - "D:/CMake/bin/"
+      - "D:/Git/cmd/"
+      - "D:/ffmpeg/"
+      - "D:/GitHub CLI/"
+      - "C:/Users/user/AppData/Local/hermes/hermes-agent/venv/Scripts/"
+      - "C:/Users/user/AppData/Local/hermes/bin/"
+      - "D:/Ollama/"
+      - "C:/Users/user/AppData/Roaming/npm/"
+      - "C:/Users/user/AppData/Local/OpenClaw/deps/portable-git/mingw64/bin/"
+      - "C:/Users/user/AppData/Local/OpenClaw/deps/portable-git/usr/bin/"
+      - "C:/Users/user/AppData/Local/Programs/Ollama/"
+    searched_directories:
+      - "D:/Program Files/Visual Studio/VC/Tools/MSVC/14.51.36231/bin/Hostx64/x64/lld-link.com"
+      - "D:/Program Files/Visual Studio/VC/Tools/MSVC/14.51.36231/bin/Hostx64/x64/lld-link.exe"
+      - "D:/Program Files/Visual Studio/VC/Tools/MSVC/14.51.36231/bin/Hostx64/x64/lld-link"
+      - "D:/Python311/Scripts/lld-link.com"
+      - "D:/Python311/Scripts/lld-link.exe"
+      - "D:/Python311/Scripts/lld-link"
+      - "D:/Python311/lld-link.com"
+      - "D:/Python311/lld-link.exe"
+      - "D:/Python311/lld-link"
+      - "C:/Python314/Scripts/lld-link.com"
+      - "C:/Python314/Scripts/lld-link.exe"
+      - "C:/Python314/Scripts/lld-link"
+      - "C:/Python314/lld-link.com"
+      - "C:/Python314/lld-link.exe"
+      - "C:/Python314/lld-link"
+      - "D:/Python313/Scripts/lld-link.com"
+      - "D:/Python313/Scripts/lld-link.exe"
+      - "D:/Python313/Scripts/lld-link"
+      - "D:/Python313/lld-link.com"
+      - "D:/Python313/lld-link.exe"
+      - "D:/Python313/lld-link"
+      - "C:/Windows/System32/lld-link.com"
+      - "C:/Windows/System32/lld-link.exe"
+      - "C:/Windows/System32/lld-link"
+      - "C:/Windows/lld-link.com"
+      - "C:/Windows/lld-link.exe"
+      - "C:/Windows/lld-link"
+      - "C:/Windows/System32/wbem/lld-link.com"
+      - "C:/Windows/System32/wbem/lld-link.exe"
+      - "C:/Windows/System32/wbem/lld-link"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/lld-link.com"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/lld-link.exe"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/lld-link"
+      - "C:/Windows/System32/OpenSSH/lld-link.com"
+      - "C:/Windows/System32/OpenSSH/lld-link.exe"
+      - "C:/Windows/System32/OpenSSH/lld-link"
+      - "C:/Program Files/dotnet/lld-link.com"
+      - "C:/Program Files/dotnet/lld-link.exe"
+      - "C:/Program Files/dotnet/lld-link"
+      - "C:/Program Files/Microsoft SQL Server/150/Tools/Binn/lld-link.com"
+      - "C:/Program Files/Microsoft SQL Server/150/Tools/Binn/lld-link.exe"
+      - "C:/Program Files/Microsoft SQL Server/150/Tools/Binn/lld-link"
+      - "C:/Program Files/PowerShell/7/lld-link.com"
+      - "C:/Program Files/PowerShell/7/lld-link.exe"
+      - "C:/Program Files/PowerShell/7/lld-link"
+      - "D:/! HexaTrade/Git/cmd/lld-link.com"
+      - "D:/! HexaTrade/Git/cmd/lld-link.exe"
+      - "D:/! HexaTrade/Git/cmd/lld-link"
+      - "D:/nodejs/lld-link.com"
+      - "D:/nodejs/lld-link.exe"
+      - "D:/nodejs/lld-link"
+      - "C:/ProgramData/chocolatey/bin/lld-link.com"
+      - "C:/ProgramData/chocolatey/bin/lld-link.exe"
+      - "C:/ProgramData/chocolatey/bin/lld-link"
+      - "D:/Windows Kits/10/Windows Performance Toolkit/lld-link.com"
+      - "D:/Windows Kits/10/Windows Performance Toolkit/lld-link.exe"
+      - "D:/Windows Kits/10/Windows Performance Toolkit/lld-link"
+      - "D:/CMake/bin/lld-link.com"
+      - "D:/CMake/bin/lld-link.exe"
+      - "D:/CMake/bin/lld-link"
+      - "D:/Git/cmd/lld-link.com"
+      - "D:/Git/cmd/lld-link.exe"
+      - "D:/Git/cmd/lld-link"
+      - "D:/ffmpeg/lld-link.com"
+      - "D:/ffmpeg/lld-link.exe"
+      - "D:/ffmpeg/lld-link"
+      - "D:/GitHub CLI/lld-link.com"
+      - "D:/GitHub CLI/lld-link.exe"
+      - "D:/GitHub CLI/lld-link"
+      - "C:/Users/user/AppData/Local/hermes/hermes-agent/venv/Scripts/lld-link.com"
+      - "C:/Users/user/AppData/Local/hermes/hermes-agent/venv/Scripts/lld-link.exe"
+      - "C:/Users/user/AppData/Local/hermes/hermes-agent/venv/Scripts/lld-link"
+      - "C:/Users/user/AppData/Local/hermes/bin/lld-link.com"
+      - "C:/Users/user/AppData/Local/hermes/bin/lld-link.exe"
+      - "C:/Users/user/AppData/Local/hermes/bin/lld-link"
+      - "D:/Ollama/lld-link.com"
+      - "D:/Ollama/lld-link.exe"
+      - "D:/Ollama/lld-link"
+      - "C:/Users/user/AppData/Roaming/npm/lld-link.com"
+      - "C:/Users/user/AppData/Roaming/npm/lld-link.exe"
+      - "C:/Users/user/AppData/Roaming/npm/lld-link"
+      - "C:/Users/user/AppData/Local/OpenClaw/deps/portable-git/mingw64/bin/lld-link.com"
+      - "C:/Users/user/AppData/Local/OpenClaw/deps/portable-git/mingw64/bin/lld-link.exe"
+      - "C:/Users/user/AppData/Local/OpenClaw/deps/portable-git/mingw64/bin/lld-link"
+      - "C:/Users/user/AppData/Local/OpenClaw/deps/portable-git/usr/bin/lld-link.com"
+      - "C:/Users/user/AppData/Local/OpenClaw/deps/portable-git/usr/bin/lld-link.exe"
+      - "C:/Users/user/AppData/Local/OpenClaw/deps/portable-git/usr/bin/lld-link"
+      - "C:/Users/user/AppData/Local/Programs/Ollama/lld-link.com"
+      - "C:/Users/user/AppData/Local/Programs/Ollama/lld-link.exe"
+      - "C:/Users/user/AppData/Local/Programs/Ollama/lld-link"
+    found: false
+    search_context:
+      ENV{PATH}:
+        - "D:\\Python311\\Scripts\\"
+        - "D:\\Python311\\"
+        - "C:\\Python314\\Scripts\\"
+        - "C:\\Python314\\"
+        - "D:\\Python313\\Scripts\\"
+        - "D:\\Python313\\"
+        - "C:\\Windows\\system32"
+        - "C:\\Windows"
+        - "C:\\Windows\\System32\\Wbem"
+        - "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\Windows\\System32\\OpenSSH\\"
+        - "C:\\Program Files\\dotnet\\"
+        - "C:\\Program Files\\Microsoft SQL Server\\150\\Tools\\Binn\\"
+        - "C:\\Program Files\\PowerShell\\7\\"
+        - "D:\\! HexaTrade\\Git\\cmd"
+        - "D:\\nodejs\\"
+        - "C:\\ProgramData\\chocolatey\\bin"
+        - "D:\\Windows Kits\\10\\Windows Performance Toolkit\\"
+        - "D:\\CMake\\bin"
+        - "D:\\Git\\cmd"
+        - "D:\\ffmpeg\\"
+        - "D:\\GitHub CLI\\"
+        - "C:\\Users\\user\\AppData\\Local\\hermes\\hermes-agent\\venv\\Scripts"
+        - "C:\\Users\\user\\AppData\\Local\\hermes\\bin"
+        - "D:\\Ollama"
+        - "C:\\Users\\user\\AppData\\Roaming\\npm"
+        - "C:\\Users\\user\\AppData\\Local\\OpenClaw\\deps\\portable-git\\mingw64\\bin"
+        - "C:\\Users\\user\\AppData\\Local\\OpenClaw\\deps\\portable-git\\usr\\bin"
+        - "C:\\Users\\user\\AppData\\Local\\Programs\\Ollama"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "D:/CMake/share/cmake-4.4/Modules/CMakeFindBinUtils.cmake:247 (find_program)"
+      - "D:/CMake/share/cmake-4.4/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
+      - "CMakeLists.txt:2 (project)"
+    mode: "program"
+    variable: "CMAKE_LINKER"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "link"
+    candidate_directories:
+      - "D:/Program Files/Visual Studio/VC/Tools/MSVC/14.51.36231/bin/Hostx64/x64/"
+      - "D:/Python311/Scripts/"
+      - "D:/Python311/"
+      - "C:/Python314/Scripts/"
+      - "C:/Python314/"
+      - "D:/Python313/Scripts/"
+      - "D:/Python313/"
+      - "C:/Windows/System32/"
+      - "C:/Windows/"
+      - "C:/Windows/System32/wbem/"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/"
+      - "C:/Windows/System32/OpenSSH/"
+      - "C:/Program Files/dotnet/"
+      - "C:/Program Files/Microsoft SQL Server/150/Tools/Binn/"
+      - "C:/Program Files/PowerShell/7/"
+      - "D:/! HexaTrade/Git/cmd/"
+      - "D:/nodejs/"
+      - "C:/ProgramData/chocolatey/bin/"
+      - "D:/Windows Kits/10/Windows Performance Toolkit/"
+      - "D:/CMake/bin/"
+      - "D:/Git/cmd/"
+      - "D:/ffmpeg/"
+      - "D:/GitHub CLI/"
+      - "C:/Users/user/AppData/Local/hermes/hermes-agent/venv/Scripts/"
+      - "C:/Users/user/AppData/Local/hermes/bin/"
+      - "D:/Ollama/"
+      - "C:/Users/user/AppData/Roaming/npm/"
+      - "C:/Users/user/AppData/Local/OpenClaw/deps/portable-git/mingw64/bin/"
+      - "C:/Users/user/AppData/Local/OpenClaw/deps/portable-git/usr/bin/"
+      - "C:/Users/user/AppData/Local/Programs/Ollama/"
+    searched_directories:
+      - "D:/Program Files/Visual Studio/VC/Tools/MSVC/14.51.36231/bin/Hostx64/x64/link.com"
+    found: "D:/Program Files/Visual Studio/VC/Tools/MSVC/14.51.36231/bin/Hostx64/x64/link.exe"
+    search_context:
+      ENV{PATH}:
+        - "D:\\Python311\\Scripts\\"
+        - "D:\\Python311\\"
+        - "C:\\Python314\\Scripts\\"
+        - "C:\\Python314\\"
+        - "D:\\Python313\\Scripts\\"
+        - "D:\\Python313\\"
+        - "C:\\Windows\\system32"
+        - "C:\\Windows"
+        - "C:\\Windows\\System32\\Wbem"
+        - "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\Windows\\System32\\OpenSSH\\"
+        - "C:\\Program Files\\dotnet\\"
+        - "C:\\Program Files\\Microsoft SQL Server\\150\\Tools\\Binn\\"
+        - "C:\\Program Files\\PowerShell\\7\\"
+        - "D:\\! HexaTrade\\Git\\cmd"
+        - "D:\\nodejs\\"
+        - "C:\\ProgramData\\chocolatey\\bin"
+        - "D:\\Windows Kits\\10\\Windows Performance Toolkit\\"
+        - "D:\\CMake\\bin"
+        - "D:\\Git\\cmd"
+        - "D:\\ffmpeg\\"
+        - "D:\\GitHub CLI\\"
+        - "C:\\Users\\user\\AppData\\Local\\hermes\\hermes-agent\\venv\\Scripts"
+        - "C:\\Users\\user\\AppData\\Local\\hermes\\bin"
+        - "D:\\Ollama"
+        - "C:\\Users\\user\\AppData\\Roaming\\npm"
+        - "C:\\Users\\user\\AppData\\Local\\OpenClaw\\deps\\portable-git\\mingw64\\bin"
+        - "C:\\Users\\user\\AppData\\Local\\OpenClaw\\deps\\portable-git\\usr\\bin"
+        - "C:\\Users\\user\\AppData\\Local\\Programs\\Ollama"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "D:/CMake/share/cmake-4.4/Modules/CMakeFindBinUtils.cmake:247 (find_program)"
+      - "D:/CMake/share/cmake-4.4/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
+      - "CMakeLists.txt:2 (project)"
+    mode: "program"
+    variable: "CMAKE_MT"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "mt"
+    candidate_directories:
+      - "D:/Program Files/Visual Studio/VC/Tools/MSVC/14.51.36231/bin/Hostx64/x64/"
+      - "D:/Python311/Scripts/"
+      - "D:/Python311/"
+      - "C:/Python314/Scripts/"
+      - "C:/Python314/"
+      - "D:/Python313/Scripts/"
+      - "D:/Python313/"
+      - "C:/Windows/System32/"
+      - "C:/Windows/"
+      - "C:/Windows/System32/wbem/"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/"
+      - "C:/Windows/System32/OpenSSH/"
+      - "C:/Program Files/dotnet/"
+      - "C:/Program Files/Microsoft SQL Server/150/Tools/Binn/"
+      - "C:/Program Files/PowerShell/7/"
+      - "D:/! HexaTrade/Git/cmd/"
+      - "D:/nodejs/"
+      - "C:/ProgramData/chocolatey/bin/"
+      - "D:/Windows Kits/10/Windows Performance Toolkit/"
+      - "D:/CMake/bin/"
+      - "D:/Git/cmd/"
+      - "D:/ffmpeg/"
+      - "D:/GitHub CLI/"
+      - "C:/Users/user/AppData/Local/hermes/hermes-agent/venv/Scripts/"
+      - "C:/Users/user/AppData/Local/hermes/bin/"
+      - "D:/Ollama/"
+      - "C:/Users/user/AppData/Roaming/npm/"
+      - "C:/Users/user/AppData/Local/OpenClaw/deps/portable-git/mingw64/bin/"
+      - "C:/Users/user/AppData/Local/OpenClaw/deps/portable-git/usr/bin/"
+      - "C:/Users/user/AppData/Local/Programs/Ollama/"
+    searched_directories:
+      - "D:/Program Files/Visual Studio/VC/Tools/MSVC/14.51.36231/bin/Hostx64/x64/mt.com"
+      - "D:/Program Files/Visual Studio/VC/Tools/MSVC/14.51.36231/bin/Hostx64/x64/mt.exe"
+      - "D:/Program Files/Visual Studio/VC/Tools/MSVC/14.51.36231/bin/Hostx64/x64/mt"
+      - "D:/Python311/Scripts/mt.com"
+      - "D:/Python311/Scripts/mt.exe"
+      - "D:/Python311/Scripts/mt"
+      - "D:/Python311/mt.com"
+      - "D:/Python311/mt.exe"
+      - "D:/Python311/mt"
+      - "C:/Python314/Scripts/mt.com"
+      - "C:/Python314/Scripts/mt.exe"
+      - "C:/Python314/Scripts/mt"
+      - "C:/Python314/mt.com"
+      - "C:/Python314/mt.exe"
+      - "C:/Python314/mt"
+      - "D:/Python313/Scripts/mt.com"
+      - "D:/Python313/Scripts/mt.exe"
+      - "D:/Python313/Scripts/mt"
+      - "D:/Python313/mt.com"
+      - "D:/Python313/mt.exe"
+      - "D:/Python313/mt"
+      - "C:/Windows/System32/mt.com"
+      - "C:/Windows/System32/mt.exe"
+      - "C:/Windows/System32/mt"
+      - "C:/Windows/mt.com"
+      - "C:/Windows/mt.exe"
+      - "C:/Windows/mt"
+      - "C:/Windows/System32/wbem/mt.com"
+      - "C:/Windows/System32/wbem/mt.exe"
+      - "C:/Windows/System32/wbem/mt"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/mt.com"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/mt.exe"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/mt"
+      - "C:/Windows/System32/OpenSSH/mt.com"
+      - "C:/Windows/System32/OpenSSH/mt.exe"
+      - "C:/Windows/System32/OpenSSH/mt"
+      - "C:/Program Files/dotnet/mt.com"
+      - "C:/Program Files/dotnet/mt.exe"
+      - "C:/Program Files/dotnet/mt"
+      - "C:/Program Files/Microsoft SQL Server/150/Tools/Binn/mt.com"
+      - "C:/Program Files/Microsoft SQL Server/150/Tools/Binn/mt.exe"
+      - "C:/Program Files/Microsoft SQL Server/150/Tools/Binn/mt"
+      - "C:/Program Files/PowerShell/7/mt.com"
+      - "C:/Program Files/PowerShell/7/mt.exe"
+      - "C:/Program Files/PowerShell/7/mt"
+      - "D:/! HexaTrade/Git/cmd/mt.com"
+      - "D:/! HexaTrade/Git/cmd/mt.exe"
+      - "D:/! HexaTrade/Git/cmd/mt"
+      - "D:/nodejs/mt.com"
+      - "D:/nodejs/mt.exe"
+      - "D:/nodejs/mt"
+      - "C:/ProgramData/chocolatey/bin/mt.com"
+      - "C:/ProgramData/chocolatey/bin/mt.exe"
+      - "C:/ProgramData/chocolatey/bin/mt"
+      - "D:/Windows Kits/10/Windows Performance Toolkit/mt.com"
+      - "D:/Windows Kits/10/Windows Performance Toolkit/mt.exe"
+      - "D:/Windows Kits/10/Windows Performance Toolkit/mt"
+      - "D:/CMake/bin/mt.com"
+      - "D:/CMake/bin/mt.exe"
+      - "D:/CMake/bin/mt"
+      - "D:/Git/cmd/mt.com"
+      - "D:/Git/cmd/mt.exe"
+      - "D:/Git/cmd/mt"
+      - "D:/ffmpeg/mt.com"
+      - "D:/ffmpeg/mt.exe"
+      - "D:/ffmpeg/mt"
+      - "D:/GitHub CLI/mt.com"
+      - "D:/GitHub CLI/mt.exe"
+      - "D:/GitHub CLI/mt"
+      - "C:/Users/user/AppData/Local/hermes/hermes-agent/venv/Scripts/mt.com"
+      - "C:/Users/user/AppData/Local/hermes/hermes-agent/venv/Scripts/mt.exe"
+      - "C:/Users/user/AppData/Local/hermes/hermes-agent/venv/Scripts/mt"
+      - "C:/Users/user/AppData/Local/hermes/bin/mt.com"
+      - "C:/Users/user/AppData/Local/hermes/bin/mt.exe"
+      - "C:/Users/user/AppData/Local/hermes/bin/mt"
+      - "D:/Ollama/mt.com"
+      - "D:/Ollama/mt.exe"
+      - "D:/Ollama/mt"
+      - "C:/Users/user/AppData/Roaming/npm/mt.com"
+      - "C:/Users/user/AppData/Roaming/npm/mt.exe"
+      - "C:/Users/user/AppData/Roaming/npm/mt"
+      - "C:/Users/user/AppData/Local/OpenClaw/deps/portable-git/mingw64/bin/mt.com"
+      - "C:/Users/user/AppData/Local/OpenClaw/deps/portable-git/mingw64/bin/mt.exe"
+      - "C:/Users/user/AppData/Local/OpenClaw/deps/portable-git/mingw64/bin/mt"
+      - "C:/Users/user/AppData/Local/OpenClaw/deps/portable-git/usr/bin/mt.com"
+      - "C:/Users/user/AppData/Local/OpenClaw/deps/portable-git/usr/bin/mt.exe"
+      - "C:/Users/user/AppData/Local/OpenClaw/deps/portable-git/usr/bin/mt"
+      - "C:/Users/user/AppData/Local/Programs/Ollama/mt.com"
+      - "C:/Users/user/AppData/Local/Programs/Ollama/mt.exe"
+      - "C:/Users/user/AppData/Local/Programs/Ollama/mt"
+    found: false
+    search_context:
+      ENV{PATH}:
+        - "D:\\Python311\\Scripts\\"
+        - "D:\\Python311\\"
+        - "C:\\Python314\\Scripts\\"
+        - "C:\\Python314\\"
+        - "D:\\Python313\\Scripts\\"
+        - "D:\\Python313\\"
+        - "C:\\Windows\\system32"
+        - "C:\\Windows"
+        - "C:\\Windows\\System32\\Wbem"
+        - "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\Windows\\System32\\OpenSSH\\"
+        - "C:\\Program Files\\dotnet\\"
+        - "C:\\Program Files\\Microsoft SQL Server\\150\\Tools\\Binn\\"
+        - "C:\\Program Files\\PowerShell\\7\\"
+        - "D:\\! HexaTrade\\Git\\cmd"
+        - "D:\\nodejs\\"
+        - "C:\\ProgramData\\chocolatey\\bin"
+        - "D:\\Windows Kits\\10\\Windows Performance Toolkit\\"
+        - "D:\\CMake\\bin"
+        - "D:\\Git\\cmd"
+        - "D:\\ffmpeg\\"
+        - "D:\\GitHub CLI\\"
+        - "C:\\Users\\user\\AppData\\Local\\hermes\\hermes-agent\\venv\\Scripts"
+        - "C:\\Users\\user\\AppData\\Local\\hermes\\bin"
+        - "D:\\Ollama"
+        - "C:\\Users\\user\\AppData\\Roaming\\npm"
+        - "C:\\Users\\user\\AppData\\Local\\OpenClaw\\deps\\portable-git\\mingw64\\bin"
+        - "C:\\Users\\user\\AppData\\Local\\OpenClaw\\deps\\portable-git\\usr\\bin"
+        - "C:\\Users\\user\\AppData\\Local\\Programs\\Ollama"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "D:/CMake/share/cmake-4.4/Modules/CMakeFindBinUtils.cmake:247 (find_program)"
+      - "D:/CMake/share/cmake-4.4/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
+      - "CMakeLists.txt:2 (project)"
+    mode: "program"
+    variable: "CMAKE_AR"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "lib"
+    candidate_directories:
+      - "D:/Program Files/Visual Studio/VC/Tools/MSVC/14.51.36231/bin/Hostx64/x64/"
+      - "D:/Python311/Scripts/"
+      - "D:/Python311/"
+      - "C:/Python314/Scripts/"
+      - "C:/Python314/"
+      - "D:/Python313/Scripts/"
+      - "D:/Python313/"
+      - "C:/Windows/System32/"
+      - "C:/Windows/"
+      - "C:/Windows/System32/wbem/"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/"
+      - "C:/Windows/System32/OpenSSH/"
+      - "C:/Program Files/dotnet/"
+      - "C:/Program Files/Microsoft SQL Server/150/Tools/Binn/"
+      - "C:/Program Files/PowerShell/7/"
+      - "D:/! HexaTrade/Git/cmd/"
+      - "D:/nodejs/"
+      - "C:/ProgramData/chocolatey/bin/"
+      - "D:/Windows Kits/10/Windows Performance Toolkit/"
+      - "D:/CMake/bin/"
+      - "D:/Git/cmd/"
+      - "D:/ffmpeg/"
+      - "D:/GitHub CLI/"
+      - "C:/Users/user/AppData/Local/hermes/hermes-agent/venv/Scripts/"
+      - "C:/Users/user/AppData/Local/hermes/bin/"
+      - "D:/Ollama/"
+      - "C:/Users/user/AppData/Roaming/npm/"
+      - "C:/Users/user/AppData/Local/OpenClaw/deps/portable-git/mingw64/bin/"
+      - "C:/Users/user/AppData/Local/OpenClaw/deps/portable-git/usr/bin/"
+      - "C:/Users/user/AppData/Local/Programs/Ollama/"
+    searched_directories:
+      - "D:/Program Files/Visual Studio/VC/Tools/MSVC/14.51.36231/bin/Hostx64/x64/lib.com"
+    found: "D:/Program Files/Visual Studio/VC/Tools/MSVC/14.51.36231/bin/Hostx64/x64/lib.exe"
+    search_context:
+      ENV{PATH}:
+        - "D:\\Python311\\Scripts\\"
+        - "D:\\Python311\\"
+        - "C:\\Python314\\Scripts\\"
+        - "C:\\Python314\\"
+        - "D:\\Python313\\Scripts\\"
+        - "D:\\Python313\\"
+        - "C:\\Windows\\system32"
+        - "C:\\Windows"
+        - "C:\\Windows\\System32\\Wbem"
+        - "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\Windows\\System32\\OpenSSH\\"
+        - "C:\\Program Files\\dotnet\\"
+        - "C:\\Program Files\\Microsoft SQL Server\\150\\Tools\\Binn\\"
+        - "C:\\Program Files\\PowerShell\\7\\"
+        - "D:\\! HexaTrade\\Git\\cmd"
+        - "D:\\nodejs\\"
+        - "C:\\ProgramData\\chocolatey\\bin"
+        - "D:\\Windows Kits\\10\\Windows Performance Toolkit\\"
+        - "D:\\CMake\\bin"
+        - "D:\\Git\\cmd"
+        - "D:\\ffmpeg\\"
+        - "D:\\GitHub CLI\\"
+        - "C:\\Users\\user\\AppData\\Local\\hermes\\hermes-agent\\venv\\Scripts"
+        - "C:\\Users\\user\\AppData\\Local\\hermes\\bin"
+        - "D:\\Ollama"
+        - "C:\\Users\\user\\AppData\\Roaming\\npm"
+        - "C:\\Users\\user\\AppData\\Local\\OpenClaw\\deps\\portable-git\\mingw64\\bin"
+        - "C:\\Users\\user\\AppData\\Local\\OpenClaw\\deps\\portable-git\\usr\\bin"
+        - "C:\\Users\\user\\AppData\\Local\\Programs\\Ollama"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "D:/CMake/share/cmake-4.4/Modules/CMakeDetermineCompilerId.cmake:501 (find_file)"
+      - "D:/CMake/share/cmake-4.4/Modules/CMakeDetermineCompilerId.cmake:538 (CMAKE_DETERMINE_COMPILER_ID_WRITE)"
+      - "D:/CMake/share/cmake-4.4/Modules/CMakeDetermineCompilerId.cmake:8 (CMAKE_DETERMINE_COMPILER_ID_BUILD)"
+      - "D:/CMake/share/cmake-4.4/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "D:/CMake/share/cmake-4.4/Modules/CMakeDetermineCXXCompiler.cmake:125 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:2 (project)"
+    mode: "file"
+    variable: "src_in"
+    description: "Path to a file."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "CMakeCXXCompilerId.cpp.in"
+    candidate_directories:
+      - "D:/CMake/share/cmake-4.4/Modules/"
+    found: "D:/CMake/share/cmake-4.4/Modules/CMakeCXXCompilerId.cpp.in"
+    search_context:
+      ENV{PATH}:
+        - "D:\\Python311\\Scripts\\"
+        - "D:\\Python311\\"
+        - "C:\\Python314\\Scripts\\"
+        - "C:\\Python314\\"
+        - "D:\\Python313\\Scripts\\"
+        - "D:\\Python313\\"
+        - "C:\\Windows\\system32"
+        - "C:\\Windows"
+        - "C:\\Windows\\System32\\Wbem"
+        - "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\Windows\\System32\\OpenSSH\\"
+        - "C:\\Program Files\\dotnet\\"
+        - "C:\\Program Files\\Microsoft SQL Server\\150\\Tools\\Binn\\"
+        - "C:\\Program Files\\PowerShell\\7\\"
+        - "D:\\! HexaTrade\\Git\\cmd"
+        - "D:\\nodejs\\"
+        - "C:\\ProgramData\\chocolatey\\bin"
+        - "D:\\Windows Kits\\10\\Windows Performance Toolkit\\"
+        - "D:\\CMake\\bin"
+        - "D:\\Git\\cmd"
+        - "D:\\ffmpeg\\"
+        - "D:\\GitHub CLI\\"
+        - "C:\\Users\\user\\AppData\\Local\\hermes\\hermes-agent\\venv\\Scripts"
+        - "C:\\Users\\user\\AppData\\Local\\hermes\\bin"
+        - "D:\\Ollama"
+        - "C:\\Users\\user\\AppData\\Roaming\\npm"
+        - "C:\\Users\\user\\AppData\\Local\\OpenClaw\\deps\\portable-git\\mingw64\\bin"
+        - "C:\\Users\\user\\AppData\\Local\\OpenClaw\\deps\\portable-git\\usr\\bin"
+        - "C:\\Users\\user\\AppData\\Local\\Programs\\Ollama"
+  -
+    kind: "message-v1"
+    backtrace:
+      - "D:/CMake/share/cmake-4.4/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "D:/CMake/share/cmake-4.4/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "D:/CMake/share/cmake-4.4/Modules/CMakeDetermineCXXCompiler.cmake:125 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
+      Compiler:  
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      0
+      Версия MSBuild 18.8.2+ce25c0108 для .NET Framework
+      Сборка начата 09.10.2026 10:51:25.
+      
+      Проект "D:\\AHexaTrader\\2026.10.08 SRP\\build\\CMakeFiles\\4.4.0\\CompilerIdCXX\\CompilerIdCXX.vcxproj" в узле 1 (целевые объекты по умолчанию).
+      PrepareForBuild:
+        Создание каталога "Debug\\".
+        Структурированный вывод включен. Форматирование диагностики компилятора будет отражать иерархию ошибок. Подробнее см. https://aka.ms/cpp/structured-output.
+        Создание каталога "Debug\\CompilerIdCXX.tlog\\".
+      InitializeBuildStatus:
+        Создание "Debug\\CompilerIdCXX.tlog\\unsuccessfulbuild", так как было задано "AlwaysCreate".
+        Обращение к "Debug\\CompilerIdCXX.tlog\\unsuccessfulbuild".
+      VcpkgTripletSelection:
+        Using triplet "x64-windows" from "D:\\vcpkg\\installed\\x64-windows\\"
+        Using normalized configuration "Release"
+      ClCompile:
+        D:\\Program Files\\Visual Studio\\VC\\Tools\\MSVC\\14.51.36231\\bin\\HostX64\\x64\\CL.exe /c /I"D:\\vcpkg\\installed\\x64-windows\\include" /nologo /W0 /WX- /diagnostics:column /Od /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"Debug\\\\" /Fd"Debug\\vc145.pdb" /external:W0 /Gd /TP /FC /errorReport:queue CMakeCXXCompilerId.cpp
+        CMakeCXXCompilerId.cpp
+      Link:
+        D:\\Program Files\\Visual Studio\\VC\\Tools\\MSVC\\14.51.36231\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:".\\CompilerIdCXX.exe" /INCREMENTAL:NO /NOLOGO /LIBPATH:"D:\\vcpkg\\installed\\x64-windows\\lib" /LIBPATH:"D:\\vcpkg\\installed\\x64-windows\\lib\\manual-link" kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib "D:\\vcpkg\\installed\\x64-windows\\lib\\*.lib" /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /PDB:".\\CompilerIdCXX.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:".\\CompilerIdCXX.lib" /MACHINE:X64 Debug\\CMakeCXXCompilerId.obj
+        CompilerIdCXX.vcxproj -> D:\\AHexaTrader\\2026.10.08 SRP\\build\\CMakeFiles\\4.4.0\\CompilerIdCXX\\CompilerIdCXX.exe
+      AppLocalFromInstalled:
+        pwsh.exe -ExecutionPolicy Bypass -noprofile -File "D:\\vcpkg\\scripts\\buildsystems\\msbuild\\applocal.ps1" "D:\\AHexaTrader\\2026.10.08 SRP\\build\\CMakeFiles\\4.4.0\\CompilerIdCXX\\CompilerIdCXX.exe" "D:\\vcpkg\\installed\\x64-windows\\bin" "Debug\\CompilerIdCXX.tlog\\CompilerIdCXX.write.1u.tlog" "Debug\\vcpkg.applocal.log"
+      PostBuildEvent:
+        for %%i in (cl.exe) do @echo CMAKE_CXX_COMPILER=%%~$PATH:i
+        :VCEnd
+        CMAKE_CXX_COMPILER=D:\\Program Files\\Visual Studio\\VC\\Tools\\MSVC\\14.51.36231\\bin\\Hostx64\\x64\\cl.exe
+      FinalizeBuildStatus:
+        Файл "Debug\\CompilerIdCXX.tlog\\unsuccessfulbuild" удаляется.
+        Обращение к "Debug\\CompilerIdCXX.tlog\\CompilerIdCXX.lastbuildstate".
+      Сборка проекта "D:\\AHexaTrader\\2026.10.08 SRP\\build\\CMakeFiles\\4.4.0\\CompilerIdCXX\\CompilerIdCXX.vcxproj" завершена (целевые объекты по умолчанию).
+      
+      Сборка успешно завершена.
+          Предупреждений: 0
+          Ошибок: 0
+      
+      Прошло времени 00:00:03.62
+      
+      
+      Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CompilerIdCXX.exe"
+      
+      Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CompilerIdCXX.vcxproj"
+      
+      The CXX compiler identification is MSVC, found in:
+        D:/AHexaTrader/2026.10.08 SRP/build/CMakeFiles/4.4.0/CompilerIdCXX/CompilerIdCXX.exe
+      
+  -
+    kind: "find-v1"
+    backtrace:
+      - "D:/CMake/share/cmake-4.4/Modules/CMakeFindBinUtils.cmake:37 (find_program)"
+      - "D:/CMake/share/cmake-4.4/Modules/CMakeFindBinUtils.cmake:64 (__resolve_tool_path)"
+      - "D:/CMake/share/cmake-4.4/Modules/CMakeFindBinUtils.cmake:103 (__resolve_linker_path)"
+      - "D:/CMake/share/cmake-4.4/Modules/CMakeDetermineCXXCompiler.cmake:206 (include)"
+      - "CMakeLists.txt:2 (project)"
+    mode: "program"
+    variable: "_CMAKE_TOOL_WITH_PATH"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "lld-link"
+    candidate_directories:
+      - "D:/Program Files/Visual Studio/VC/Tools/MSVC/14.51.36231/bin/Hostx64/x64/"
+      - "D:/Python311/Scripts/"
+      - "D:/Python311/"
+      - "C:/Python314/Scripts/"
+      - "C:/Python314/"
+      - "D:/Python313/Scripts/"
+      - "D:/Python313/"
+      - "C:/Windows/System32/"
+      - "C:/Windows/"
+      - "C:/Windows/System32/wbem/"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/"
+      - "C:/Windows/System32/OpenSSH/"
+      - "C:/Program Files/dotnet/"
+      - "C:/Program Files/Microsoft SQL Server/150/Tools/Binn/"
+      - "C:/Program Files/PowerShell/7/"
+      - "D:/! HexaTrade/Git/cmd/"
+      - "D:/nodejs/"
+      - "C:/ProgramData/chocolatey/bin/"
+      - "D:/Windows Kits/10/Windows Performance Toolkit/"
+      - "D:/CMake/bin/"
+      - "D:/Git/cmd/"
+      - "D:/ffmpeg/"
+      - "D:/GitHub CLI/"
+      - "C:/Users/user/AppData/Local/hermes/hermes-agent/venv/Scripts/"
+      - "C:/Users/user/AppData/Local/hermes/bin/"
+      - "D:/Ollama/"
+      - "C:/Users/user/AppData/Roaming/npm/"
+      - "C:/Users/user/AppData/Local/OpenClaw/deps/portable-git/mingw64/bin/"
+      - "C:/Users/user/AppData/Local/OpenClaw/deps/portable-git/usr/bin/"
+      - "C:/Users/user/AppData/Local/Programs/Ollama/"
+    searched_directories:
+      - "D:/Program Files/Visual Studio/VC/Tools/MSVC/14.51.36231/bin/Hostx64/x64/lld-link.com"
+      - "D:/Program Files/Visual Studio/VC/Tools/MSVC/14.51.36231/bin/Hostx64/x64/lld-link.exe"
+      - "D:/Program Files/Visual Studio/VC/Tools/MSVC/14.51.36231/bin/Hostx64/x64/lld-link"
+      - "D:/Python311/Scripts/lld-link.com"
+      - "D:/Python311/Scripts/lld-link.exe"
+      - "D:/Python311/Scripts/lld-link"
+      - "D:/Python311/lld-link.com"
+      - "D:/Python311/lld-link.exe"
+      - "D:/Python311/lld-link"
+      - "C:/Python314/Scripts/lld-link.com"
+      - "C:/Python314/Scripts/lld-link.exe"
+      - "C:/Python314/Scripts/lld-link"
+      - "C:/Python314/lld-link.com"
+      - "C:/Python314/lld-link.exe"
+      - "C:/Python314/lld-link"
+      - "D:/Python313/Scripts/lld-link.com"
+      - "D:/Python313/Scripts/lld-link.exe"
+      - "D:/Python313/Scripts/lld-link"
+      - "D:/Python313/lld-link.com"
+      - "D:/Python313/lld-link.exe"
+      - "D:/Python313/lld-link"
+      - "C:/Windows/System32/lld-link.com"
+      - "C:/Windows/System32/lld-link.exe"
+      - "C:/Windows/System32/lld-link"
+      - "C:/Windows/lld-link.com"
+      - "C:/Windows/lld-link.exe"
+      - "C:/Windows/lld-link"
+      - "C:/Windows/System32/wbem/lld-link.com"
+      - "C:/Windows/System32/wbem/lld-link.exe"
+      - "C:/Windows/System32/wbem/lld-link"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/lld-link.com"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/lld-link.exe"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/lld-link"
+      - "C:/Windows/System32/OpenSSH/lld-link.com"
+      - "C:/Windows/System32/OpenSSH/lld-link.exe"
+      - "C:/Windows/System32/OpenSSH/lld-link"
+      - "C:/Program Files/dotnet/lld-link.com"
+      - "C:/Program Files/dotnet/lld-link.exe"
+      - "C:/Program Files/dotnet/lld-link"
+      - "C:/Program Files/Microsoft SQL Server/150/Tools/Binn/lld-link.com"
+      - "C:/Program Files/Microsoft SQL Server/150/Tools/Binn/lld-link.exe"
+      - "C:/Program Files/Microsoft SQL Server/150/Tools/Binn/lld-link"
+      - "C:/Program Files/PowerShell/7/lld-link.com"
+      - "C:/Program Files/PowerShell/7/lld-link.exe"
+      - "C:/Program Files/PowerShell/7/lld-link"
+      - "D:/! HexaTrade/Git/cmd/lld-link.com"
+      - "D:/! HexaTrade/Git/cmd/lld-link.exe"
+      - "D:/! HexaTrade/Git/cmd/lld-link"
+      - "D:/nodejs/lld-link.com"
+      - "D:/nodejs/lld-link.exe"
+      - "D:/nodejs/lld-link"
+      - "C:/ProgramData/chocolatey/bin/lld-link.com"
+      - "C:/ProgramData/chocolatey/bin/lld-link.exe"
+      - "C:/ProgramData/chocolatey/bin/lld-link"
+      - "D:/Windows Kits/10/Windows Performance Toolkit/lld-link.com"
+      - "D:/Windows Kits/10/Windows Performance Toolkit/lld-link.exe"
+      - "D:/Windows Kits/10/Windows Performance Toolkit/lld-link"
+      - "D:/CMake/bin/lld-link.com"
+      - "D:/CMake/bin/lld-link.exe"
+      - "D:/CMake/bin/lld-link"
+      - "D:/Git/cmd/lld-link.com"
+      - "D:/Git/cmd/lld-link.exe"
+      - "D:/Git/cmd/lld-link"
+      - "D:/ffmpeg/lld-link.com"
+      - "D:/ffmpeg/lld-link.exe"
+      - "D:/ffmpeg/lld-link"
+      - "D:/GitHub CLI/lld-link.com"
+      - "D:/GitHub CLI/lld-link.exe"
+      - "D:/GitHub CLI/lld-link"
+      - "C:/Users/user/AppData/Local/hermes/hermes-agent/venv/Scripts/lld-link.com"
+      - "C:/Users/user/AppData/Local/hermes/hermes-agent/venv/Scripts/lld-link.exe"
+      - "C:/Users/user/AppData/Local/hermes/hermes-agent/venv/Scripts/lld-link"
+      - "C:/Users/user/AppData/Local/hermes/bin/lld-link.com"
+      - "C:/Users/user/AppData/Local/hermes/bin/lld-link.exe"
+      - "C:/Users/user/AppData/Local/hermes/bin/lld-link"
+      - "D:/Ollama/lld-link.com"
+      - "D:/Ollama/lld-link.exe"
+      - "D:/Ollama/lld-link"
+      - "C:/Users/user/AppData/Roaming/npm/lld-link.com"
+      - "C:/Users/user/AppData/Roaming/npm/lld-link.exe"
+      - "C:/Users/user/AppData/Roaming/npm/lld-link"
+      - "C:/Users/user/AppData/Local/OpenClaw/deps/portable-git/mingw64/bin/lld-link.com"
+      - "C:/Users/user/AppData/Local/OpenClaw/deps/portable-git/mingw64/bin/lld-link.exe"
+      - "C:/Users/user/AppData/Local/OpenClaw/deps/portable-git/mingw64/bin/lld-link"
+      - "C:/Users/user/AppData/Local/OpenClaw/deps/portable-git/usr/bin/lld-link.com"
+      - "C:/Users/user/AppData/Local/OpenClaw/deps/portable-git/usr/bin/lld-link.exe"
+      - "C:/Users/user/AppData/Local/OpenClaw/deps/portable-git/usr/bin/lld-link"
+      - "C:/Users/user/AppData/Local/Programs/Ollama/lld-link.com"
+      - "C:/Users/user/AppData/Local/Programs/Ollama/lld-link.exe"
+      - "C:/Users/user/AppData/Local/Programs/Ollama/lld-link"
+    found: false
+    search_context:
+      ENV{PATH}:
+        - "D:\\Python311\\Scripts\\"
+        - "D:\\Python311\\"
+        - "C:\\Python314\\Scripts\\"
+        - "C:\\Python314\\"
+        - "D:\\Python313\\Scripts\\"
+        - "D:\\Python313\\"
+        - "C:\\Windows\\system32"
+        - "C:\\Windows"
+        - "C:\\Windows\\System32\\Wbem"
+        - "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\Windows\\System32\\OpenSSH\\"
+        - "C:\\Program Files\\dotnet\\"
+        - "C:\\Program Files\\Microsoft SQL Server\\150\\Tools\\Binn\\"
+        - "C:\\Program Files\\PowerShell\\7\\"
+        - "D:\\! HexaTrade\\Git\\cmd"
+        - "D:\\nodejs\\"
+        - "C:\\ProgramData\\chocolatey\\bin"
+        - "D:\\Windows Kits\\10\\Windows Performance Toolkit\\"
+        - "D:\\CMake\\bin"
+        - "D:\\Git\\cmd"
+        - "D:\\ffmpeg\\"
+        - "D:\\GitHub CLI\\"
+        - "C:\\Users\\user\\AppData\\Local\\hermes\\hermes-agent\\venv\\Scripts"
+        - "C:\\Users\\user\\AppData\\Local\\hermes\\bin"
+        - "D:\\Ollama"
+        - "C:\\Users\\user\\AppData\\Roaming\\npm"
+        - "C:\\Users\\user\\AppData\\Local\\OpenClaw\\deps\\portable-git\\mingw64\\bin"
+        - "C:\\Users\\user\\AppData\\Local\\OpenClaw\\deps\\portable-git\\usr\\bin"
+        - "C:\\Users\\user\\AppData\\Local\\Programs\\Ollama"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "D:/CMake/share/cmake-4.4/Modules/CMakeDetermineRCCompiler.cmake:40 (find_program)"
+      - "D:/CMake/share/cmake-4.4/Modules/Platform/Windows-MSVC.cmake:592 (enable_language)"
+      - "D:/CMake/share/cmake-4.4/Modules/Platform/Windows-MSVC.cmake:565 (__windows_compiler_msvc_enable_rc)"
+      - "D:/CMake/share/cmake-4.4/Modules/Platform/Windows-MSVC-C.cmake:5 (__windows_compiler_msvc)"
+      - "D:/CMake/share/cmake-4.4/Modules/CMakeCInformation.cmake:48 (include)"
+      - "CMakeLists.txt:2 (project)"
+    mode: "program"
+    variable: "CMAKE_RC_COMPILER"
+    description: "RC compiler"
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "rc"
+    candidate_directories:
+      - "D:/Python311/Scripts/"
+      - "D:/Python311/"
+      - "C:/Python314/Scripts/"
+      - "C:/Python314/"
+      - "D:/Python313/Scripts/"
+      - "D:/Python313/"
+      - "C:/Windows/System32/"
+      - "C:/Windows/"
+      - "C:/Windows/System32/wbem/"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/"
+      - "C:/Windows/System32/OpenSSH/"
+      - "C:/Program Files/dotnet/"
+      - "C:/Program Files/Microsoft SQL Server/150/Tools/Binn/"
+      - "C:/Program Files/PowerShell/7/"
+      - "D:/! HexaTrade/Git/cmd/"
+      - "D:/nodejs/"
+      - "C:/ProgramData/chocolatey/bin/"
+      - "D:/Windows Kits/10/Windows Performance Toolkit/"
+      - "D:/CMake/bin/"
+      - "D:/Git/cmd/"
+      - "D:/ffmpeg/"
+      - "D:/GitHub CLI/"
+      - "C:/Users/user/AppData/Local/hermes/hermes-agent/venv/Scripts/"
+      - "C:/Users/user/AppData/Local/hermes/bin/"
+      - "D:/Ollama/"
+      - "C:/Users/user/AppData/Roaming/npm/"
+      - "C:/Users/user/AppData/Local/OpenClaw/deps/portable-git/mingw64/bin/"
+      - "C:/Users/user/AppData/Local/OpenClaw/deps/portable-git/usr/bin/"
+      - "C:/Users/user/AppData/Local/Programs/Ollama/"
+      - "C:/Program Files/bin/"
+      - "C:/Program Files/sbin/"
+      - "C:/Program Files/"
+      - "C:/Program Files (x86)/bin/"
+      - "C:/Program Files (x86)/sbin/"
+      - "C:/Program Files (x86)/"
+      - "D:/CMake/bin/"
+      - "D:/CMake/sbin/"
+      - "D:/CMake/"
+      - "C:/Program Files (x86)/srp/bin/"
+      - "C:/Program Files (x86)/srp/sbin/"
+      - "C:/Program Files (x86)/srp/"
+    searched_directories:
+      - "D:/Python311/Scripts/rc.com"
+      - "D:/Python311/Scripts/rc.exe"
+      - "D:/Python311/Scripts/rc"
+      - "D:/Python311/rc.com"
+      - "D:/Python311/rc.exe"
+      - "D:/Python311/rc"
+      - "C:/Python314/Scripts/rc.com"
+      - "C:/Python314/Scripts/rc.exe"
+      - "C:/Python314/Scripts/rc"
+      - "C:/Python314/rc.com"
+      - "C:/Python314/rc.exe"
+      - "C:/Python314/rc"
+      - "D:/Python313/Scripts/rc.com"
+      - "D:/Python313/Scripts/rc.exe"
+      - "D:/Python313/Scripts/rc"
+      - "D:/Python313/rc.com"
+      - "D:/Python313/rc.exe"
+      - "D:/Python313/rc"
+      - "C:/Windows/System32/rc.com"
+      - "C:/Windows/System32/rc.exe"
+      - "C:/Windows/System32/rc"
+      - "C:/Windows/rc.com"
+      - "C:/Windows/rc.exe"
+      - "C:/Windows/rc"
+      - "C:/Windows/System32/wbem/rc.com"
+      - "C:/Windows/System32/wbem/rc.exe"
+      - "C:/Windows/System32/wbem/rc"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/rc.com"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/rc.exe"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/rc"
+      - "C:/Windows/System32/OpenSSH/rc.com"
+      - "C:/Windows/System32/OpenSSH/rc.exe"
+      - "C:/Windows/System32/OpenSSH/rc"
+      - "C:/Program Files/dotnet/rc.com"
+      - "C:/Program Files/dotnet/rc.exe"
+      - "C:/Program Files/dotnet/rc"
+      - "C:/Program Files/Microsoft SQL Server/150/Tools/Binn/rc.com"
+      - "C:/Program Files/Microsoft SQL Server/150/Tools/Binn/rc.exe"
+      - "C:/Program Files/Microsoft SQL Server/150/Tools/Binn/rc"
+      - "C:/Program Files/PowerShell/7/rc.com"
+      - "C:/Program Files/PowerShell/7/rc.exe"
+      - "C:/Program Files/PowerShell/7/rc"
+      - "D:/! HexaTrade/Git/cmd/rc.com"
+      - "D:/! HexaTrade/Git/cmd/rc.exe"
+      - "D:/! HexaTrade/Git/cmd/rc"
+      - "D:/nodejs/rc.com"
+      - "D:/nodejs/rc.exe"
+      - "D:/nodejs/rc"
+      - "C:/ProgramData/chocolatey/bin/rc.com"
+      - "C:/ProgramData/chocolatey/bin/rc.exe"
+      - "C:/ProgramData/chocolatey/bin/rc"
+      - "D:/Windows Kits/10/Windows Performance Toolkit/rc.com"
+      - "D:/Windows Kits/10/Windows Performance Toolkit/rc.exe"
+      - "D:/Windows Kits/10/Windows Performance Toolkit/rc"
+      - "D:/CMake/bin/rc.com"
+      - "D:/CMake/bin/rc.exe"
+      - "D:/CMake/bin/rc"
+      - "D:/Git/cmd/rc.com"
+      - "D:/Git/cmd/rc.exe"
+      - "D:/Git/cmd/rc"
+      - "D:/ffmpeg/rc.com"
+      - "D:/ffmpeg/rc.exe"
+      - "D:/ffmpeg/rc"
+      - "D:/GitHub CLI/rc.com"
+      - "D:/GitHub CLI/rc.exe"
+      - "D:/GitHub CLI/rc"
+      - "C:/Users/user/AppData/Local/hermes/hermes-agent/venv/Scripts/rc.com"
+      - "C:/Users/user/AppData/Local/hermes/hermes-agent/venv/Scripts/rc.exe"
+      - "C:/Users/user/AppData/Local/hermes/hermes-agent/venv/Scripts/rc"
+      - "C:/Users/user/AppData/Local/hermes/bin/rc.com"
+      - "C:/Users/user/AppData/Local/hermes/bin/rc.exe"
+      - "C:/Users/user/AppData/Local/hermes/bin/rc"
+      - "D:/Ollama/rc.com"
+      - "D:/Ollama/rc.exe"
+      - "D:/Ollama/rc"
+      - "C:/Users/user/AppData/Roaming/npm/rc.com"
+      - "C:/Users/user/AppData/Roaming/npm/rc.exe"
+      - "C:/Users/user/AppData/Roaming/npm/rc"
+      - "C:/Users/user/AppData/Local/OpenClaw/deps/portable-git/mingw64/bin/rc.com"
+      - "C:/Users/user/AppData/Local/OpenClaw/deps/portable-git/mingw64/bin/rc.exe"
+      - "C:/Users/user/AppData/Local/OpenClaw/deps/portable-git/mingw64/bin/rc"
+      - "C:/Users/user/AppData/Local/OpenClaw/deps/portable-git/usr/bin/rc.com"
+      - "C:/Users/user/AppData/Local/OpenClaw/deps/portable-git/usr/bin/rc.exe"
+      - "C:/Users/user/AppData/Local/OpenClaw/deps/portable-git/usr/bin/rc"
+      - "C:/Users/user/AppData/Local/Programs/Ollama/rc.com"
+      - "C:/Users/user/AppData/Local/Programs/Ollama/rc.exe"
+      - "C:/Users/user/AppData/Local/Programs/Ollama/rc"
+      - "C:/Program Files/bin/rc.com"
+      - "C:/Program Files/bin/rc.exe"
+      - "C:/Program Files/bin/rc"
+      - "C:/Program Files/sbin/rc.com"
+      - "C:/Program Files/sbin/rc.exe"
+      - "C:/Program Files/sbin/rc"
+      - "C:/Program Files/rc.com"
+      - "C:/Program Files/rc.exe"
+      - "C:/Program Files/rc"
+      - "C:/Program Files (x86)/bin/rc.com"
+      - "C:/Program Files (x86)/bin/rc.exe"
+      - "C:/Program Files (x86)/bin/rc"
+      - "C:/Program Files (x86)/sbin/rc.com"
+      - "C:/Program Files (x86)/sbin/rc.exe"
+      - "C:/Program Files (x86)/sbin/rc"
+      - "C:/Program Files (x86)/rc.com"
+      - "C:/Program Files (x86)/rc.exe"
+      - "C:/Program Files (x86)/rc"
+      - "D:/CMake/bin/rc.com"
+      - "D:/CMake/bin/rc.exe"
+      - "D:/CMake/bin/rc"
+      - "D:/CMake/sbin/rc.com"
+      - "D:/CMake/sbin/rc.exe"
+      - "D:/CMake/sbin/rc"
+      - "D:/CMake/rc.com"
+      - "D:/CMake/rc.exe"
+      - "D:/CMake/rc"
+      - "C:/Program Files (x86)/srp/bin/rc.com"
+      - "C:/Program Files (x86)/srp/bin/rc.exe"
+      - "C:/Program Files (x86)/srp/bin/rc"
+      - "C:/Program Files (x86)/srp/sbin/rc.com"
+      - "C:/Program Files (x86)/srp/sbin/rc.exe"
+      - "C:/Program Files (x86)/srp/sbin/rc"
+      - "C:/Program Files (x86)/srp/rc.com"
+      - "C:/Program Files (x86)/srp/rc.exe"
+      - "C:/Program Files (x86)/srp/rc"
+    found: false
+    search_context:
+      ENV{PATH}:
+        - "D:\\Python311\\Scripts\\"
+        - "D:\\Python311\\"
+        - "C:\\Python314\\Scripts\\"
+        - "C:\\Python314\\"
+        - "D:\\Python313\\Scripts\\"
+        - "D:\\Python313\\"
+        - "C:\\Windows\\system32"
+        - "C:\\Windows"
+        - "C:\\Windows\\System32\\Wbem"
+        - "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\Windows\\System32\\OpenSSH\\"
+        - "C:\\Program Files\\dotnet\\"
+        - "C:\\Program Files\\Microsoft SQL Server\\150\\Tools\\Binn\\"
+        - "C:\\Program Files\\PowerShell\\7\\"
+        - "D:\\! HexaTrade\\Git\\cmd"
+        - "D:\\nodejs\\"
+        - "C:\\ProgramData\\chocolatey\\bin"
+        - "D:\\Windows Kits\\10\\Windows Performance Toolkit\\"
+        - "D:\\CMake\\bin"
+        - "D:\\Git\\cmd"
+        - "D:\\ffmpeg\\"
+        - "D:\\GitHub CLI\\"
+        - "C:\\Users\\user\\AppData\\Local\\hermes\\hermes-agent\\venv\\Scripts"
+        - "C:\\Users\\user\\AppData\\Local\\hermes\\bin"
+        - "D:\\Ollama"
+        - "C:\\Users\\user\\AppData\\Roaming\\npm"
+        - "C:\\Users\\user\\AppData\\Local\\OpenClaw\\deps\\portable-git\\mingw64\\bin"
+        - "C:\\Users\\user\\AppData\\Local\\OpenClaw\\deps\\portable-git\\usr\\bin"
+        - "C:\\Users\\user\\AppData\\Local\\Programs\\Ollama"
+      CMAKE_INSTALL_PREFIX: "C:/Program Files (x86)/srp"
+      CMAKE_SYSTEM_PREFIX_PATH:
+        - "C:/Program Files"
+        - "C:/Program Files (x86)"
+        - "D:/CMake"
+        - "C:/Program Files (x86)/srp"
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "D:/CMake/share/cmake-4.4/Modules/CMakeDetermineCompilerABI.cmake:123 (try_compile)"
+      - "D:/CMake/share/cmake-4.4/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:2 (project)"
+    checks:
+      - "Detecting C compiler ABI info"
+    directories:
+      source: "D:/AHexaTrader/2026.10.08 SRP/build/CMakeFiles/CMakeScratch/TryCompile-xn3b7r"
+      binary: "D:/AHexaTrader/2026.10.08 SRP/build/CMakeFiles/CMakeScratch/TryCompile-xn3b7r"
+    cmakeVariables:
+      CMAKE_CXX_STDLIB_MODULES_JSON: ""
+      CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS"
+      CMAKE_C_FLAGS_DEBUG: "/Zi /Ob0 /Od /RTC1"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+    buildResult:
+      variable: "CMAKE_C_ABI_COMPILED"
+      cached: false
+      stdout: |
+        Change Dir: 'D:/AHexaTrader/2026.10.08 SRP/build/CMakeFiles/CMakeScratch/TryCompile-xn3b7r'
+        
+        Run Build Command(s): "D:/Program Files/Visual Studio/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_500d1.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=18.0 /v:n
+        Версия MSBuild 18.8.2+ce25c0108 для .NET Framework
+        Сборка начата 09.10.2026 10:51:29.
+        
+        Проект "D:\\AHexaTrader\\2026.10.08 SRP\\build\\CMakeFiles\\CMakeScratch\\TryCompile-xn3b7r\\cmTC_500d1.vcxproj" в узле 1 (целевые объекты по умолчанию).
+        PrepareForBuild:
+          Структурированный вывод включен. Форматирование диагностики компилятора будет отражать иерархию ошибок. Подробнее см. https://aka.ms/cpp/structured-output.
+          Создание каталога "D:\\AHexaTrader\\2026.10.08 SRP\\build\\CMakeFiles\\CMakeScratch\\TryCompile-xn3b7r\\Debug\\".
+          Создание каталога "cmTC_500d1.dir\\Debug\\cmTC_500d1.tlog\\".
+        InitializeBuildStatus:
+          Создание "cmTC_500d1.dir\\Debug\\cmTC_500d1.tlog\\unsuccessfulbuild", так как было задано "AlwaysCreate".
+          Обращение к "cmTC_500d1.dir\\Debug\\cmTC_500d1.tlog\\unsuccessfulbuild".
+        VcpkgTripletSelection:
+          Using triplet "x64-windows" from "D:\\vcpkg\\installed\\x64-windows\\"
+          Using normalized configuration "Debug"
+        ClCompile:
+          D:\\Program Files\\Visual Studio\\VC\\Tools\\MSVC\\14.51.36231\\bin\\HostX64\\x64\\CL.exe /c /I"D:\\vcpkg\\installed\\x64-windows\\include" /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _MBCS /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /Fo"cmTC_500d1.dir\\Debug\\\\" /Fd"cmTC_500d1.dir\\Debug\\vc145.pdb" /external:W1 /TC /errorReport:queue "D:\\CMake\\share\\cmake-4.4\\Modules\\CMakeCCompilerABI.c"
+          Microsoft (R) C/C++ Optimizing Compiler Version 19.51.36252 for x64
+          (C) Корпорация Майкрософт (Microsoft Corporation).  Все права защищены.
+          cl /c /I"D:\\vcpkg\\installed\\x64-windows\\include" /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _MBCS /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /Fo"cmTC_500d1.dir\\Debug\\\\" /Fd"cmTC_500d1.dir\\Debug\\vc145.pdb" /external:W1 /TC /errorReport:queue "D:\\CMake\\share\\cmake-4.4\\Modules\\CMakeCCompilerABI.c"
+          CMakeCCompilerABI.c
+        Link:
+          D:\\Program Files\\Visual Studio\\VC\\Tools\\MSVC\\14.51.36231\\bin\\HostX64\\x64\\link.exe /OUT:"D:\\AHexaTrader\\2026.10.08 SRP\\build\\CMakeFiles\\CMakeScratch\\TryCompile-xn3b7r\\Debug\\cmTC_500d1.exe" /INCREMENTAL /ILK:"cmTC_500d1.dir\\Debug\\cmTC_500d1.ilk" /NOLOGO /LIBPATH:"D:\\vcpkg\\installed\\x64-windows\\debug\\lib" /LIBPATH:"D:\\vcpkg\\installed\\x64-windows\\debug\\lib\\manual-link" kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib "D:\\vcpkg\\installed\\x64-windows\\debug\\lib\\*.lib" /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:/AHexaTrader/2026.10.08 SRP/build/CMakeFiles/CMakeScratch/TryCompile-xn3b7r/Debug/cmTC_500d1.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /IMPLIB:"D:/AHexaTrader/2026.10.08 SRP/build/CMakeFiles/CMakeScratch/TryCompile-xn3b7r/Debug/cmTC_500d1.lib" /MACHINE:X64  /machine:x64 cmTC_500d1.dir\\Debug\\CMakeCCompilerABI.obj
+          cmTC_500d1.vcxproj -> D:\\AHexaTrader\\2026.10.08 SRP\\build\\CMakeFiles\\CMakeScratch\\TryCompile-xn3b7r\\Debug\\cmTC_500d1.exe
+        AppLocalFromInstalled:
+          pwsh.exe -ExecutionPolicy Bypass -noprofile -File "D:\\vcpkg\\scripts\\buildsystems\\msbuild\\applocal.ps1" "D:\\AHexaTrader\\2026.10.08 SRP\\build\\CMakeFiles\\CMakeScratch\\TryCompile-xn3b7r\\Debug\\cmTC_500d1.exe" "D:\\vcpkg\\installed\\x64-windows\\debug\\bin" "cmTC_500d1.dir\\Debug\\cmTC_500d1.tlog\\cmTC_500d1.write.1u.tlog" "cmTC_500d1.dir\\Debug\\vcpkg.applocal.log"
+        FinalizeBuildStatus:
+          Файл "cmTC_500d1.dir\\Debug\\cmTC_500d1.tlog\\unsuccessfulbuild" удаляется.
+          Обращение к "cmTC_500d1.dir\\Debug\\cmTC_500d1.tlog\\cmTC_500d1.lastbuildstate".
+        Сборка проекта "D:\\AHexaTrader\\2026.10.08 SRP\\build\\CMakeFiles\\CMakeScratch\\TryCompile-xn3b7r\\cmTC_500d1.vcxproj" завершена (целевые объекты по умолчанию).
+        
+        Сборка успешно завершена.
+            Предупреждений: 0
+            Ошибок: 0
+        
+        Прошло времени 00:00:03.45
+        
+      exitCode: 0
+  -
+    kind: "message-v1"
+    backtrace:
+      - "D:/CMake/share/cmake-4.4/Modules/CMakeDetermineCompilerABI.cmake:291 (message)"
+      - "D:/CMake/share/cmake-4.4/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Parsed C implicit link information:
+        link line regex: [^( *|.*[/\\])(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)|link\\.exe|lld-link(\\.exe)?|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
+        linker tool regex: [^[ 	]*(->|"|[0-9]+>[ 	-]*Build:[ 	0-9]+ ms[ 	]*)?[ 	]*(([^"]*[/\\])?(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)|link\\.exe|lld-link(\\.exe)?))("|,| |$)]
+        link line: [  D:\\Program Files\\Visual Studio\\VC\\Tools\\MSVC\\14.51.36231\\bin\\HostX64\\x64\\link.exe /OUT:"D:\\AHexaTrader\\2026.10.08 SRP\\build\\CMakeFiles\\CMakeScratch\\TryCompile-xn3b7r\\Debug\\cmTC_500d1.exe" /INCREMENTAL /ILK:"cmTC_500d1.dir\\Debug\\cmTC_500d1.ilk" /NOLOGO /LIBPATH:"D:\\vcpkg\\installed\\x64-windows\\debug\\lib" /LIBPATH:"D:\\vcpkg\\installed\\x64-windows\\debug\\lib\\manual-link" kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib "D:\\vcpkg\\installed\\x64-windows\\debug\\lib\\*.lib" /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:/AHexaTrader/2026.10.08 SRP/build/CMakeFiles/CMakeScratch/TryCompile-xn3b7r/Debug/cmTC_500d1.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /IMPLIB:"D:/AHexaTrader/2026.10.08 SRP/build/CMakeFiles/CMakeScratch/TryCompile-xn3b7r/Debug/cmTC_500d1.lib" /MACHINE:X64  /machine:x64 cmTC_500d1.dir\\Debug\\CMakeCCompilerABI.obj] ==> linker [D:\\Program Files\\Visual Studio\\VC\\Tools\\MSVC\\14.51.36231\\bin\\HostX64\\x64\\link.exe]
+        linker tool for 'C': D:/Program Files/Visual Studio/VC/Tools/MSVC/14.51.36231/bin/HostX64/x64/link.exe 
+        implicit libs: []
+        implicit objs: []
+        implicit dirs: []
+        implicit fwks: []
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "D:/CMake/share/cmake-4.4/Modules/Internal/CMakeDetermineLinkerId.cmake:41 (message)"
+      - "D:/CMake/share/cmake-4.4/Modules/CMakeDetermineCompilerABI.cmake:337 (cmake_determine_linker_id)"
+      - "D:/CMake/share/cmake-4.4/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Running the C compiler's linker: "D:/Program Files/Visual Studio/VC/Tools/MSVC/14.51.36231/bin/HostX64/x64/link.exe" "-v"
+      Microsoft (R) Incremental Linker Version 14.51.36252.0
+      Copyright (C) Microsoft Corporation.  All rights reserved.
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "D:/CMake/share/cmake-4.4/Modules/CMakeDetermineCompilerABI.cmake:123 (try_compile)"
+      - "D:/CMake/share/cmake-4.4/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:2 (project)"
+    checks:
+      - "Detecting CXX compiler ABI info"
+    directories:
+      source: "D:/AHexaTrader/2026.10.08 SRP/build/CMakeFiles/CMakeScratch/TryCompile-nnbi51"
+      binary: "D:/AHexaTrader/2026.10.08 SRP/build/CMakeFiles/CMakeScratch/TryCompile-nnbi51"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: "/DWIN32 /D_WINDOWS /GR /EHsc"
+      CMAKE_CXX_FLAGS_DEBUG: "/Zi /Ob0 /Od /RTC1"
+      CMAKE_CXX_SCAN_FOR_MODULES: "OFF"
+      CMAKE_CXX_STDLIB_MODULES_JSON: ""
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+    buildResult:
+      variable: "CMAKE_CXX_ABI_COMPILED"
+      cached: false
+      stdout: |
+        Change Dir: 'D:/AHexaTrader/2026.10.08 SRP/build/CMakeFiles/CMakeScratch/TryCompile-nnbi51'
+        
+        Run Build Command(s): "D:/Program Files/Visual Studio/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_6ca01.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=18.0 /v:n
+        Версия MSBuild 18.8.2+ce25c0108 для .NET Framework
+        Сборка начата 09.10.2026 10:51:33.
+        
+        Проект "D:\\AHexaTrader\\2026.10.08 SRP\\build\\CMakeFiles\\CMakeScratch\\TryCompile-nnbi51\\cmTC_6ca01.vcxproj" в узле 1 (целевые объекты по умолчанию).
+        PrepareForBuild:
+          Структурированный вывод включен. Форматирование диагностики компилятора будет отражать иерархию ошибок. Подробнее см. https://aka.ms/cpp/structured-output.
+          Создание каталога "D:\\AHexaTrader\\2026.10.08 SRP\\build\\CMakeFiles\\CMakeScratch\\TryCompile-nnbi51\\Debug\\".
+          Создание каталога "cmTC_6ca01.dir\\Debug\\cmTC_6ca01.tlog\\".
+        InitializeBuildStatus:
+          Создание "cmTC_6ca01.dir\\Debug\\cmTC_6ca01.tlog\\unsuccessfulbuild", так как было задано "AlwaysCreate".
+          Обращение к "cmTC_6ca01.dir\\Debug\\cmTC_6ca01.tlog\\unsuccessfulbuild".
+        VcpkgTripletSelection:
+          Using triplet "x64-windows" from "D:\\vcpkg\\installed\\x64-windows\\"
+          Using normalized configuration "Debug"
+        ClCompile:
+          D:\\Program Files\\Visual Studio\\VC\\Tools\\MSVC\\14.51.36231\\bin\\HostX64\\x64\\CL.exe /c /I"D:\\vcpkg\\installed\\x64-windows\\include" /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _MBCS /D "CMAKE_INTDIR=\\"Debug\\"" /EHsc /RTC1 /MDd /GR /Fo"cmTC_6ca01.dir\\Debug\\\\" /Fd"cmTC_6ca01.dir\\Debug\\vc145.pdb" /external:W1 /TP /errorReport:queue "D:\\CMake\\share\\cmake-4.4\\Modules\\CMakeCXXCompilerABI.cpp"
+          Microsoft (R) C/C++ Optimizing Compiler Version 19.51.36252 for x64
+          (C) Корпорация Майкрософт (Microsoft Corporation).  Все права защищены.
+          cl /c /I"D:\\vcpkg\\installed\\x64-windows\\include" /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _MBCS /D "CMAKE_INTDIR=\\"Debug\\"" /EHsc /RTC1 /MDd /GR /Fo"cmTC_6ca01.dir\\Debug\\\\" /Fd"cmTC_6ca01.dir\\Debug\\vc145.pdb" /external:W1 /TP /errorReport:queue "D:\\CMake\\share\\cmake-4.4\\Modules\\CMakeCXXCompilerABI.cpp"
+          CMakeCXXCompilerABI.cpp
+        Link:
+          D:\\Program Files\\Visual Studio\\VC\\Tools\\MSVC\\14.51.36231\\bin\\HostX64\\x64\\link.exe /OUT:"D:\\AHexaTrader\\2026.10.08 SRP\\build\\CMakeFiles\\CMakeScratch\\TryCompile-nnbi51\\Debug\\cmTC_6ca01.exe" /INCREMENTAL /ILK:"cmTC_6ca01.dir\\Debug\\cmTC_6ca01.ilk" /NOLOGO /LIBPATH:"D:\\vcpkg\\installed\\x64-windows\\debug\\lib" /LIBPATH:"D:\\vcpkg\\installed\\x64-windows\\debug\\lib\\manual-link" kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib "D:\\vcpkg\\installed\\x64-windows\\debug\\lib\\*.lib" /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:/AHexaTrader/2026.10.08 SRP/build/CMakeFiles/CMakeScratch/TryCompile-nnbi51/Debug/cmTC_6ca01.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /IMPLIB:"D:/AHexaTrader/2026.10.08 SRP/build/CMakeFiles/CMakeScratch/TryCompile-nnbi51/Debug/cmTC_6ca01.lib" /MACHINE:X64  /machine:x64 cmTC_6ca01.dir\\Debug\\CMakeCXXCompilerABI.obj
+          cmTC_6ca01.vcxproj -> D:\\AHexaTrader\\2026.10.08 SRP\\build\\CMakeFiles\\CMakeScratch\\TryCompile-nnbi51\\Debug\\cmTC_6ca01.exe
+        AppLocalFromInstalled:
+          pwsh.exe -ExecutionPolicy Bypass -noprofile -File "D:\\vcpkg\\scripts\\buildsystems\\msbuild\\applocal.ps1" "D:\\AHexaTrader\\2026.10.08 SRP\\build\\CMakeFiles\\CMakeScratch\\TryCompile-nnbi51\\Debug\\cmTC_6ca01.exe" "D:\\vcpkg\\installed\\x64-windows\\debug\\bin" "cmTC_6ca01.dir\\Debug\\cmTC_6ca01.tlog\\cmTC_6ca01.write.1u.tlog" "cmTC_6ca01.dir\\Debug\\vcpkg.applocal.log"
+        FinalizeBuildStatus:
+          Файл "cmTC_6ca01.dir\\Debug\\cmTC_6ca01.tlog\\unsuccessfulbuild" удаляется.
+          Обращение к "cmTC_6ca01.dir\\Debug\\cmTC_6ca01.tlog\\cmTC_6ca01.lastbuildstate".
+        Сборка проекта "D:\\AHexaTrader\\2026.10.08 SRP\\build\\CMakeFiles\\CMakeScratch\\TryCompile-nnbi51\\cmTC_6ca01.vcxproj" завершена (целевые объекты по умолчанию).
+        
+        Сборка успешно завершена.
+            Предупреждений: 0
+            Ошибок: 0
+        
+        Прошло времени 00:00:03.86
+        
+      exitCode: 0
+  -
+    kind: "message-v1"
+    backtrace:
+      - "D:/CMake/share/cmake-4.4/Modules/CMakeDetermineCompilerABI.cmake:291 (message)"
+      - "D:/CMake/share/cmake-4.4/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Parsed CXX implicit link information:
+        link line regex: [^( *|.*[/\\])(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)|link\\.exe|lld-link(\\.exe)?|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
+        linker tool regex: [^[ 	]*(->|"|[0-9]+>[ 	-]*Build:[ 	0-9]+ ms[ 	]*)?[ 	]*(([^"]*[/\\])?(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)|link\\.exe|lld-link(\\.exe)?))("|,| |$)]
+        link line: [  D:\\Program Files\\Visual Studio\\VC\\Tools\\MSVC\\14.51.36231\\bin\\HostX64\\x64\\link.exe /OUT:"D:\\AHexaTrader\\2026.10.08 SRP\\build\\CMakeFiles\\CMakeScratch\\TryCompile-nnbi51\\Debug\\cmTC_6ca01.exe" /INCREMENTAL /ILK:"cmTC_6ca01.dir\\Debug\\cmTC_6ca01.ilk" /NOLOGO /LIBPATH:"D:\\vcpkg\\installed\\x64-windows\\debug\\lib" /LIBPATH:"D:\\vcpkg\\installed\\x64-windows\\debug\\lib\\manual-link" kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib "D:\\vcpkg\\installed\\x64-windows\\debug\\lib\\*.lib" /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:/AHexaTrader/2026.10.08 SRP/build/CMakeFiles/CMakeScratch/TryCompile-nnbi51/Debug/cmTC_6ca01.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /IMPLIB:"D:/AHexaTrader/2026.10.08 SRP/build/CMakeFiles/CMakeScratch/TryCompile-nnbi51/Debug/cmTC_6ca01.lib" /MACHINE:X64  /machine:x64 cmTC_6ca01.dir\\Debug\\CMakeCXXCompilerABI.obj] ==> linker [D:\\Program Files\\Visual Studio\\VC\\Tools\\MSVC\\14.51.36231\\bin\\HostX64\\x64\\link.exe]
+        linker tool for 'CXX': D:/Program Files/Visual Studio/VC/Tools/MSVC/14.51.36231/bin/HostX64/x64/link.exe 
+        implicit libs: []
+        implicit objs: []
+        implicit dirs: []
+        implicit fwks: []
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "D:/CMake/share/cmake-4.4/Modules/Internal/CMakeDetermineLinkerId.cmake:41 (message)"
+      - "D:/CMake/share/cmake-4.4/Modules/CMakeDetermineCompilerABI.cmake:337 (cmake_determine_linker_id)"
+      - "D:/CMake/share/cmake-4.4/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Running the CXX compiler's linker: "D:/Program Files/Visual Studio/VC/Tools/MSVC/14.51.36231/bin/HostX64/x64/link.exe" "-v"
+      Microsoft (R) Incremental Linker Version 14.51.36252.0
+      Copyright (C) Microsoft Corporation.  All rights reserved.
+...

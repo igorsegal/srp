@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="18.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="D:\AHexaTrader\2026.10.08 SRP\src\main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\AHexaTrader\2026.10.08 SRP\src\DataManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\AHexaTrader\2026.10.08 SRP\src\AO_Zotik.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\AHexaTrader\2026.10.08 SRP\src\WPR_VSmark.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\AHexaTrader\2026.10.08 SRP\src\WaveABC.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="D:\AHexaTrader\2026.10.08 SRP\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{604FD5B4-1F50-36C9-B5D5-A095C2327A51}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
