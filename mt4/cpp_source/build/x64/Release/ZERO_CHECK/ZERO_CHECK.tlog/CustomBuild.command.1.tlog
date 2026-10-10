@@ -1,0 +1,10 @@
+^D:\AHEXATRADER\2026.10.08 SRP\MT4\CPP_SOURCE\BUILD\CMAKEFILES\AC271981C72DE15D5723A4CA35EFDF07\GENERATE.STAMP.RULE
+setlocal
+D:\CMake\bin\cmake.exe "-SD:/AHexaTrader/2026.10.08 SRP/mt4/cpp_source" "-BD:/AHexaTrader/2026.10.08 SRP/mt4/cpp_source/build" --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file "D:/AHexaTrader/2026.10.08 SRP/mt4/cpp_source/build/PortfolioCoreDLL.slnx"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

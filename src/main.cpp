@@ -9,6 +9,7 @@
 #include <set>
 #include <map>
 #include <fstream>
+#include <ctime>
 #include "DataManager.h"
 #include "WaveABC.h"
 #include "AO_Zotik.h"
@@ -38,10 +39,12 @@ struct ActiveTrade {
     double pnlUSD;
     bool isWin;
 };
-struct ExportTradeRecord {
+struct ClosedTradeRecord {
     int64_t exitTime;
+    int year;
+    int month;
     std::string symbol;
-    std::string outcome;
+    bool isWin;
     double lotSize;
     double pnlUSD;
     double balanceAfter;
@@ -52,6 +55,17 @@ struct InstrumentData {
     std::vector<Bar> h1Bars;
     bool isJpy;
 };
+void getYearMonth(int64_t timestamp, int& yr, int& mo) {
+    std::time_t t = static_cast<std::time_t>(timestamp);
+    std::tm* utctm = std::gmtime(&t);
+    if (!utctm) {
+        yr = 2020;
+        mo = 1;
+        return;
+    }
+    yr = utctm->tm_year + 1900;
+    mo = utctm->tm_mon + 1;
+}
 std::vector<double> calculateEMA(const std::vector<Bar>& bars, int period) {
     std::vector<double> ema(bars.size(), 0.0);
     if (bars.empty()) return ema;
@@ -62,20 +76,19 @@ std::vector<double> calculateEMA(const std::vector<Bar>& bars, int period) {
     }
     return ema;
 }
-void runAndExportPureTwoPairTrades(const std::vector<TradeSignal>& allSignals,
-                                   const std::vector<InstrumentData>& portfolioData,
-                                   const std::set<std::string>& allowedSymbols,
-                                   double startDeposit,
-                                   double riskPct,
-                                   double leverage,
-                                   const std::string& csvPath) {
-    double deposit = startDeposit;
-    double balance = deposit;
-    double peakEquity = deposit;
-    double maxDrawdownUSD = 0.0;
-    double maxDrawdownPct = 0.0;
+void runConfigTest(const std::string& testName,
+                   const std::vector<TradeSignal>& allSignals,
+                   const std::vector<InstrumentData>& portfolioData,
+                   const std::set<std::string>& allowedSymbols,
+                   double startDeposit,
+                   double baseRiskPct,
+                   double leverage) {
+    double balance = startDeposit;
+    double peakEquity = startDeposit;
+    double maxGlobalDDUSD = 0.0;
+    double maxGlobalDDPct = 0.0;
     std::vector<ActiveTrade> openTrades;
-    std::vector<ExportTradeRecord> exportRecords;
+    std::vector<ClosedTradeRecord> closedTrades;
     const double spreadPips = 1.5;
     const double slippagePips = 0.5;
     const double commissionPerLot = 6.0;
@@ -84,8 +97,6 @@ void runAndExportPureTwoPairTrades(const std::vector<TradeSignal>& allSignals,
     const int64_t startTime2020 = 1577836800; // 2020-01-01
     int wins = 0;
     int losses = 0;
-    double grossProfit = 0.0;
-    double grossLoss = 0.0;
     for (const auto& sig : allSignals) {
         if (sig.time < startTime2020) continue;
         if (!sig.passEmaTrend) continue;
@@ -96,7 +107,9 @@ void runAndExportPureTwoPairTrades(const std::vector<TradeSignal>& allSignals,
             if (it->exitTime <= sig.time) {
                 balance += it->pnlUSD;
                 if (balance < 0) balance = 0;
-                exportRecords.push_back({it->exitTime, it->symbol, it->pnlUSD >= 0 ? "WIN" : "LOSS", it->lotSize, it->pnlUSD, balance});
+                int yr, mo;
+                getYearMonth(it->exitTime, yr, mo);
+                closedTrades.push_back({it->exitTime, yr, mo, it->symbol, it->isWin, it->lotSize, it->pnlUSD, balance});
                 it = openTrades.erase(it);
             } else {
                 ++it;
@@ -108,7 +121,11 @@ void runAndExportPureTwoPairTrades(const std::vector<TradeSignal>& allSignals,
         for (const auto& tr : openTrades) totalUsedMargin += tr.marginUsed;
         double marginLevel = (totalUsedMargin > 0.0) ? (balance / totalUsedMargin) * 100.0 : 99999.0;
         if (marginLevel <= 500.0 && !openTrades.empty()) continue;
-        double riskUSD = balance * riskPct;
+        // Формула обратного корня
+        double balanceRatio = balance / startDeposit;
+        if (balanceRatio < 1.0) balanceRatio = 1.0;
+        double currentRiskPct = baseRiskPct / std::sqrt(balanceRatio);
+        double riskUSD = balance * currentRiskPct;
         double riskPips = 35.0;
         if (riskPips < 10.0) riskPips = 10.0;
         double lotSize = riskUSD / (riskPips * 10.0);
@@ -170,53 +187,72 @@ void runAndExportPureTwoPairTrades(const std::vector<TradeSignal>& allSignals,
             tradePips += totalFrictionPips;
         }
         double tradeCommissionUSD = lotSize * commissionPerLot;
-        double pnlUSD = 0.0;
-        if (isWin) {
-            pnlUSD = (lotSize * std::abs(tradePips) * 10.0) - tradeCommissionUSD;
-            grossProfit += (lotSize * std::abs(tradePips) * 10.0);
-            wins++;
-        } else {
-            pnlUSD = -(riskUSD + tradeCommissionUSD);
-            grossLoss += std::abs(pnlUSD);
-            losses++;
-        }
+        double pnlUSD = isWin ? (lotSize * std::abs(tradePips) * 10.0) - tradeCommissionUSD : -(riskUSD + tradeCommissionUSD);
+        if (isWin) wins++; else losses++;
         openTrades.push_back({sig.symbol, sigBase, sigQuote, sig.time, exitTime, lotSize, marginRequired, riskUSD, pnlUSD, isWin});
         double currentEq = balance;
         for (const auto& tr : openTrades) currentEq += tr.pnlUSD;
         if (currentEq > peakEquity) peakEquity = currentEq;
         double ddUSD = peakEquity - currentEq;
         double ddPct = (peakEquity > 0) ? (ddUSD / peakEquity) * 100.0 : 0.0;
-        if (ddUSD > maxDrawdownUSD) maxDrawdownUSD = ddUSD;
-        if (ddPct > maxDrawdownPct) maxDrawdownPct = ddPct;
+        if (ddUSD > maxGlobalDDUSD) maxGlobalDDUSD = ddUSD;
+        if (ddPct > maxGlobalDDPct) maxGlobalDDPct = ddPct;
     }
     for (const auto& tr : openTrades) {
         balance += tr.pnlUSD;
         if (balance < 0) balance = 0;
-        exportRecords.push_back({tr.exitTime, tr.symbol, tr.pnlUSD >= 0 ? "WIN" : "LOSS", tr.lotSize, tr.pnlUSD, balance});
+        int yr, mo;
+        getYearMonth(tr.exitTime, yr, mo);
+        closedTrades.push_back({tr.exitTime, yr, mo, tr.symbol, tr.isWin, tr.lotSize, tr.pnlUSD, balance});
     }
-    std::sort(exportRecords.begin(), exportRecords.end(), [](const ExportTradeRecord& a, const ExportTradeRecord& b) {
-        return a.exitTime < b.exitTime;
-    });
-    std::ofstream outFile(csvPath);
-    outFile << "Timestamp,Symbol,Outcome,LotSize,PnL_USD,BalanceAfter\n";
-    for (const auto& rec : exportRecords) {
-        outFile << rec.exitTime << "," << rec.symbol << "," << rec.outcome << "," << rec.lotSize << "," << rec.pnlUSD << "," << rec.balanceAfter << "\n";
+    // Помесячный анализ
+    std::map<std::string, std::vector<ClosedTradeRecord>> monthlyMap;
+    for (const auto& tr : closedTrades) {
+        char buf[32];
+        std::sprintf(buf, "%04d-%02d", tr.year, tr.month);
+        monthlyMap[buf].push_back(tr);
     }
-    outFile.close();
+    int totalMonths = monthlyMap.size();
+    int profitableMonths = 0;
+    int losingMonths = 0;
+    double maxMonthlyDDUSD = 0.0;
+    double maxMonthlyDDPct = 0.0;
+    double runningBal = startDeposit;
+    for (auto const& [ym, mTrades] : monthlyMap) {
+        double mStart = runningBal;
+        double mPeak = mStart;
+        double mMaxDD = 0.0;
+        double mCur = mStart;
+        double mNet = 0.0;
+        for (const auto& tr : mTrades) {
+            mNet += tr.pnlUSD;
+            mCur += tr.pnlUSD;
+            if (mCur > mPeak) mPeak = mCur;
+            double ddPct = (mPeak > 0) ? ((mPeak - mCur) / mPeak) * 100.0 : 0.0;
+            if (ddPct > mMaxDD) mMaxDD = ddPct;
+        }
+        double mEnd = mStart + mNet;
+        if (mNet >= 0) profitableMonths++; else losingMonths++;
+        if (mMaxDD > maxMonthlyDDPct) maxMonthlyDDPct = mMaxDD;
+        runningBal = mEnd;
+    }
+    double netProfitPct = ((balance - startDeposit) / startDeposit) * 100.0;
     int totalTrades = wins + losses;
     double winRate = (totalTrades > 0) ? (static_cast<double>(wins) / totalTrades) * 100.0 : 0.0;
-    double netProfitUSD = balance - deposit;
-    double netProfitPct = (netProfitUSD / deposit) * 100.0;
-    std::cout << "\n=========================================================\n";
-    std::cout << " PURE 2-PAIR SIMULATION (GBPUSD & USDJPY) [Risk 7%, Lev 300] \n";
-    std::cout << "=========================================================\n";
-    std::cout << "Starting Deposit : $" << std::fixed << std::setprecision(2) << deposit << "\n";
-    std::cout << "Ending Balance   : $" << balance << " (" << netProfitPct << "%)\n";
-    std::cout << "Total Trades     : " << totalTrades << " (Wins: " << wins << ", Losses: " << losses << ")\n";
-    std::cout << "Win Rate         : " << std::setprecision(1) << winRate << "%\n";
-    std::cout << "Max Drawdown     : $" << std::setprecision(0) << maxDrawdownUSD << " (" << std::setprecision(1) << maxDrawdownPct << "%)\n";
-    std::cout << "Exported Trades  : " << csvPath << "\n";
-    std::cout << "=========================================================\n";
+    std::cout << "\n========================================================================\n";
+    std::cout << " TEST CONFIG: " << testName << "\n";
+    std::cout << "========================================================================\n";
+    std::cout << " Starting Deposit : $" << std::fixed << std::setprecision(2) << startDeposit << "\n";
+    std::cout << " Base Risk Pct    : " << std::setprecision(1) << (baseRiskPct * 100.0) << "%\n";
+    std::cout << " Ending Balance   : $" << std::setprecision(2) << balance << " (" << netProfitPct << "%)\n";
+    std::cout << " Total Trades     : " << totalTrades << " (Win Rate: " << winRate << "%)\n";
+    std::cout << " Global Max DD    : $" << std::setprecision(0) << maxGlobalDDUSD << " (" << std::setprecision(1) << maxGlobalDDPct << "%)\n";
+    std::cout << "------------------------------------------------------------------------\n";
+    std::cout << " Total Months     : " << totalMonths << "\n";
+    std::cout << " Profitable Months: " << profitableMonths << " (" << std::setprecision(1) << (static_cast<double>(profitableMonths)/totalMonths*100.0) << "%)\n";
+    std::cout << " Losing Months    : " << losingMonths << " (" << std::setprecision(1) << (static_cast<double>(losingMonths)/totalMonths*100.0) << "%)\n";
+    std::cout << " Max Monthly DD   : " << std::setprecision(1) << maxMonthlyDDPct << "%\n";
+    std::cout << "========================================================================\n";
 }
 int main() {
     std::string rawDataDir = "D:\\AHexaTrader\\1DataFiles\\raw";
@@ -224,7 +260,7 @@ int main() {
         std::cerr << "Data directory not found: " << rawDataDir << std::endl;
         return 1;
     }
-    std::vector<std::string> targetPairs = {"GBPUSD", "USDJPY"};
+    std::vector<std::string> targetPairs = {"GBPUSD", "USDJPY", "USDCAD", "USDCHF"};
     std::vector<InstrumentData> portfolioData;
     for (const auto& pairName : targetPairs) {
         fs::path pairDir = fs::path(rawDataDir) / pairName;
@@ -285,8 +321,10 @@ int main() {
         processInstrument(inst, 25.0);
     }
     std::sort(allSignals.begin(), allSignals.end(), [](const TradeSignal& a, const TradeSignal& b) { return a.time < b.time; });
-    std::set<std::string> twoPairs = {"GBPUSD", "USDJPY"};
-    std::string csvOut = "D:\\AHexaTrader\\2026.10.08 SRP\\pure_two_pair_trades.csv";
-    runAndExportPureTwoPairTrades(allSignals, portfolioData, twoPairs, 1000.0, 0.07, 300.0, csvOut);
+    std::set<std::string> fourPairs = {"GBPUSD", "USDJPY", "USDCAD", "USDCHF"};
+    // Запускаем три запрошенных теста
+    runConfigTest("Variant 1: Deposit $2,000 (Risk 10%)", allSignals, portfolioData, fourPairs, 2000.0, 0.10, 300.0);
+    runConfigTest("Variant 2: Deposit $1,000 (Risk 13%)", allSignals, portfolioData, fourPairs, 1000.0, 0.13, 300.0);
+    runConfigTest("Variant 3: Deposit $1,000 (Risk 20%)", allSignals, portfolioData, fourPairs, 1000.0, 0.20, 300.0);
     return 0;
 }

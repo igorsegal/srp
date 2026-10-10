@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="18.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="D:\AHexaTrader\2026.10.08 SRP\mt4\cpp_source\build\CMakeFiles\ac271981c72de15d5723a4ca35efdf07\generate.stamp.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{232FDCFF-FE57-33E0-8EE0-18369636BF18}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

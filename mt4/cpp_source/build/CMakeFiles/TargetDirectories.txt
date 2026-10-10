@@ -1,0 +1,3 @@
+D:/AHexaTrader/2026.10.08 SRP/mt4/cpp_source/build/CMakeFiles/PortfolioCoreDLL.dir
+D:/AHexaTrader/2026.10.08 SRP/mt4/cpp_source/build/CMakeFiles/ALL_BUILD.dir
+D:/AHexaTrader/2026.10.08 SRP/mt4/cpp_source/build/CMakeFiles/ZERO_CHECK.dir
