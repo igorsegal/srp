@@ -4,17 +4,13 @@
 #include <vector>
 #include "DataManager.h"
 
-struct WPR_VSmarkResult {
+struct WPR_Result {
     std::vector<double> wpr;
-    std::vector<double> signal;
-    std::vector<double> line2;
-    std::vector<double> line3;
 };
 
 class WPR_VSmark {
 public:
-    static WPR_VSmarkResult calculate(const std::vector<Bar>& bars, int period = 14, int signalPeriod = 5);
+    static WPR_Result calculate(const std::vector<Bar>& bars, int period = 14);
 };
 
 #endif
-

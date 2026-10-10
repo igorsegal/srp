@@ -7,7 +7,6 @@ std::vector<ABC_Pattern> WaveABC::detect(const std::vector<Bar>& bars, double mi
     if (bars.size() < 50) return patterns;
 
     double minDelta = minSwingPips * pointSize;
-
     struct SwingPoint {
         size_t index;
         double price;
@@ -15,9 +14,8 @@ std::vector<ABC_Pattern> WaveABC::detect(const std::vector<Bar>& bars, double mi
     };
 
     std::vector<SwingPoint> swings;
-    int depth = 10; // Глубина поиска значимого экстремума
+    int depth = 10;
 
-    // Поиск ключевых разворотных точек с фильтрацией шума
     for (size_t i = depth; i < bars.size() - depth; ++i) {
         bool isHigh = true;
         bool isLow = true;
@@ -42,19 +40,16 @@ std::vector<ABC_Pattern> WaveABC::detect(const std::vector<Bar>& bars, double mi
         }
     }
 
-    // Формирование волн ABC с проверкой минимального размаха в пунктах
     if (swings.size() >= 3) {
         for (size_t k = 0; k < swings.size() - 2; ++k) {
             SwingPoint pA = swings[k];
             SwingPoint pB = swings[k + 1];
             SwingPoint pC = swings[k + 2];
 
-            // Чередование экстремумов
             if (pA.isHigh != pB.isHigh && pB.isHigh != pC.isHigh) {
                 double abSpan = std::abs(pB.price - pA.price) / pointSize;
                 double bcSpan = std::abs(pC.price - pB.price) / pointSize;
 
-                // Жесткий фильтр: обе волны AB и BC должны удовлетворять минимальному порогу размаха
                 if (abSpan >= minSwingPips && bcSpan >= minSwingPips) {
                     ABC_Pattern pat;
                     pat.indexA = pA.index;
@@ -72,7 +67,5 @@ std::vector<ABC_Pattern> WaveABC::detect(const std::vector<Bar>& bars, double mi
             }
         }
     }
-
     return patterns;
 }
-

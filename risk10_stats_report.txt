@@ -1,0 +1,10 @@
+=== srp AGGRESSIVE BENCHMARK REPORT (Risk 10.0%) ===
+
+--- INDIVIDUAL PAIRS ---
+GBPUSD: Balance=128917, Net%=1189.17%, Trades=262, WinRate=67.9389%, PF=2.42753, MaxDD%=24.6765%
+USDJPY: Balance=174777, Net%=1647.77%, Trades=672, WinRate=59.375%, PF=1.61804, MaxDD%=25.6614%
+USDCAD: Balance=48565.7, Net%=385.657%, Trades=127, WinRate=66.1417%, PF=1.91469, MaxDD%=9.74648%
+USDCHF: Balance=30411.4, Net%=204.114%, Trades=75, WinRate=69.3333%, PF=1.9106, MaxDD%=24.3336%
+
+--- COMBINED PORTFOLIO ---
+Balance=352103, Net%=3421.03%, Trades=1137, WinRate=62.7089%, PF=1.82159, MaxDD%=24.6765%

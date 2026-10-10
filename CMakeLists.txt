@@ -12,5 +12,7 @@ add_executable(srp
     src/AO_Zotik.cpp
     src/WPR_VSmark.cpp
     src/WaveABC.cpp
+    src/VolumeVUK.cpp
+    src/BacktestEngine.cpp
+    src/PerformanceAnalyzer.cpp
 )
-

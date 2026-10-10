@@ -16,6 +16,15 @@
     <ClCompile Include="D:\AHexaTrader\2026.10.08 SRP\src\WaveABC.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="D:\AHexaTrader\2026.10.08 SRP\src\VolumeVUK.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\AHexaTrader\2026.10.08 SRP\src\BacktestEngine.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\AHexaTrader\2026.10.08 SRP\src\PerformanceAnalyzer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <CustomBuild Include="D:\AHexaTrader\2026.10.08 SRP\CMakeLists.txt" />

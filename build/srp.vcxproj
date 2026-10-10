@@ -373,6 +373,9 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     <ClCompile Include="D:\AHexaTrader\2026.10.08 SRP\src\AO_Zotik.cpp" />
     <ClCompile Include="D:\AHexaTrader\2026.10.08 SRP\src\WPR_VSmark.cpp" />
     <ClCompile Include="D:\AHexaTrader\2026.10.08 SRP\src\WaveABC.cpp" />
+    <ClCompile Include="D:\AHexaTrader\2026.10.08 SRP\src\VolumeVUK.cpp" />
+    <ClCompile Include="D:\AHexaTrader\2026.10.08 SRP\src\BacktestEngine.cpp" />
+    <ClCompile Include="D:\AHexaTrader\2026.10.08 SRP\src\PerformanceAnalyzer.cpp" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

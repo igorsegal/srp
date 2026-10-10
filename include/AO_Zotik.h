@@ -4,17 +4,13 @@
 #include <vector>
 #include "DataManager.h"
 
-struct AO_ZotikResult {
+struct AO_Result {
     std::vector<double> histogram;
-    std::vector<double> signal;
-    std::vector<double> line2;
-    std::vector<double> line3;
 };
 
 class AO_Zotik {
 public:
-    static AO_ZotikResult calculate(const std::vector<Bar>& bars, int fastPeriod = 5, int slowPeriod = 35, int signalPeriod = 5);
+    static AO_Result calculate(const std::vector<Bar>& bars, int fastPeriod = 5, int slowPeriod = 34);
 };
 
 #endif
-
