@@ -1,0 +1,39 @@
+/docs
+  TZ.md
+  glossary_formal.md        # ваши определения → формулы
+  author_system.md          # описание авторской системы + стейтменты
+  acceptance_criteria.md
+  broker_spec.md
+/src
+  /core
+    /market_structure       # УЛ, СП, ЛБ, ЗФ, пучок линий
+    /tr_engine              # формирование ТР, 4 условия, пробой основания
+    /wave_engine            # волна А, подволна а, ABC, инвалидация
+    /state_machine          # WAIT_CROSS → ... → TRADE_LIFECYCLE
+  /indicators
+    AO_Zotik_adapter        # обёртка над iCustom
+    WPR_VSmark_adapter
+    MAS_Zotik_adapter
+    SRP_RK_adapter
+  /extensions
+    /rubber_square          # РК: площадь, деформация, пробой
+    /correction_classifier  # закрутка/раскрутка
+    /wave_aging             # старение волны
+    /nonstandard_tf         # синтез H2, H8, H10, H12
+    /gap_detector           # пробел
+  /execution
+    /mt4_bridge             # OrderSend, идемпотентность
+    /risk
+  /data
+    /closed_bar_feed
+    /replay_engine
+/tests
+  /unit
+  /integration
+  /replay_golden           # эталонные сценарии из авторской системы
+/backtest
+  /configs
+  /reports
+/deploy
+  Dockerfile
+  docker-compose.yml

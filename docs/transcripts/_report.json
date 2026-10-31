@@ -1,0 +1,104 @@
+[
+  {
+    "file": "01.mp4",
+    "segments": 207,
+    "language": "ru",
+    "seconds": 39.1
+  },
+  {
+    "file": "02.mp4",
+    "segments": 277,
+    "language": "ru",
+    "seconds": 56.4
+  },
+  {
+    "file": "03.mp4",
+    "segments": 198,
+    "language": "ru",
+    "seconds": 50.6
+  },
+  {
+    "file": "04.mp4",
+    "segments": 632,
+    "language": "ru",
+    "seconds": 119.2
+  },
+  {
+    "file": "05.mp4",
+    "segments": 448,
+    "language": "ru",
+    "seconds": 92.2
+  },
+  {
+    "file": "06.mp4",
+    "segments": 396,
+    "language": "ru",
+    "seconds": 55.9
+  },
+  {
+    "file": "07.mp4",
+    "segments": 324,
+    "language": "ru",
+    "seconds": 90.3
+  },
+  {
+    "file": "08.mp4",
+    "segments": 316,
+    "language": "ru",
+    "seconds": 78.4
+  },
+  {
+    "file": "09.mp4",
+    "segments": 651,
+    "language": "ru",
+    "seconds": 86.0
+  },
+  {
+    "file": "10.mp4",
+    "segments": 839,
+    "language": "ru",
+    "seconds": 105.9
+  },
+  {
+    "file": "11.mp4",
+    "segments": 550,
+    "language": "ru",
+    "seconds": 66.0
+  },
+  {
+    "file": "12.mp4",
+    "segments": 270,
+    "language": "ru",
+    "seconds": 75.7
+  },
+  {
+    "file": "13.mp4",
+    "segments": 200,
+    "language": "ru",
+    "seconds": 43.3
+  },
+  {
+    "file": "14.mp4",
+    "segments": 424,
+    "language": "ru",
+    "seconds": 78.8
+  },
+  {
+    "file": "15.mp4",
+    "segments": 552,
+    "language": "ru",
+    "seconds": 99.4
+  },
+  {
+    "file": "16.mp4",
+    "segments": 294,
+    "language": "ru",
+    "seconds": 91.6
+  },
+  {
+    "file": "17.mp4",
+    "segments": 279,
+    "language": "ru",
+    "seconds": 50.6
+  }
+]
