@@ -8,7 +8,6 @@ public:
     TrendAnalyzer();
     void OnBarClose(const IndicatorSnapshot& snapshot) override;
 
-    // Геттеры для получения данных о наклоне
     double GetMA3() const { return ma3_value; }
     double GetSlopeAngle() const { return slope_angle; }
     bool IsUptrend() const { return slope_angle > 0; }
