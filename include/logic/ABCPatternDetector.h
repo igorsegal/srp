@@ -5,9 +5,9 @@
 class ABCPatternDetector : public IModule {
 public:
     enum ABCState {
-        WAIT_A, // Ищем начало волны А (пересечение ОЛ и СП)
-        WAIT_B, // Ждем коррекции (заход за СП)
-        WAIT_C  // Ждем завершения волны С (новая ТР)
+        WAIT_A,
+        WAIT_B,
+        WAIT_C
     };
 
     ABCPatternDetector();
@@ -15,7 +15,7 @@ public:
 
 private:
     ABCState current_state;
-    bool is_bullish; // Направление текущего паттерна (вверх или вниз)
+    bool is_bullish; 
     double prev_ol;
     double prev_sp;
 };
