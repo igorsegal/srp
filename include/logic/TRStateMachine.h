@@ -18,14 +18,20 @@ public:
 private:
     State current_state;
     
-    // Переменные для отслеживания пересечения
+    // Для отслеживания пересечения
     double prev_ol;
     double prev_sp;
     bool is_initialized;
 
-    // Переменные для отслеживания экстремума (ТР)
-    bool is_searching_up;      // Ищем ТР вверх или вниз
+    // Данные о текущей ТР
+    bool is_searching_up;      
+    double wave_start_price;   // Цена, от которой началось движение (старт волны)
     double tr_price_level;     // Ценовой уровень экстремума (ТР)
-    int bars_since_extremum;   // Счетчик баров после экстремума
-    double current_extremum_val; // Значение экстремума на графике цены
+    int bars_since_extremum;   
+    double current_extremum_val; 
+
+    // Потенциал ТР
+    TRTargets current_targets;
+
+    void CalculatePotential(const IndicatorSnapshot& snapshot);
 };
