@@ -10,7 +10,6 @@ void ABCPatternDetector::OnBarClose(const IndicatorSnapshot& snapshot) {
 
     switch (current_state) {
         case WAIT_A:
-            // Условие 1: Начало волны А (ОЛ пересекла СП)
             if (prev_ol <= prev_sp && ol > sp) {
                 current_state = WAIT_B;
                 is_bullish = true;
@@ -24,7 +23,6 @@ void ABCPatternDetector::OnBarClose(const IndicatorSnapshot& snapshot) {
             break;
 
         case WAIT_B:
-            // Условие 2: Истинность волны В (заход за СП в обратную сторону)
             if (is_bullish && ol < sp) {
                 current_state = WAIT_C;
                 EventLogger::Log("ABC", "Волна В подтверждена (заход за СП вниз). Ждем волну С.", snapshot.bar.close_time);
@@ -36,21 +34,19 @@ void ABCPatternDetector::OnBarClose(const IndicatorSnapshot& snapshot) {
             break;
 
         case WAIT_C:
-            // Условие 3: Волна С (заканчивается новой ТР в обратную сторону)
             if (is_bullish) {
                 if (prev_ol >= prev_sp && ol < sp) {
-                    EventLogger::Log("ABC", "Волна С ЗАВЕРШЕНА (сформирована новая ТР вниз). Паттерн ABC готов!", snapshot.bar.close_time);
+                    EventLogger::Log("ABC", "Волна С ЗАВЕРШЕНА (новая ТР вниз). Паттерн ABC готов!", snapshot.bar.close_time);
                     current_state = WAIT_A;
                 }
             } else {
                 if (prev_ol <= prev_sp && ol > sp) {
-                    EventLogger::Log("ABC", "Волна С ЗАВЕРШЕНА (сформирована новая ТР вверх). Паттерн ABC готов!", snapshot.bar.close_time);
+                    EventLogger::Log("ABC", "Волна С ЗАВЕРШЕНА (новая ТР вверх). Паттерн ABC готов!", snapshot.bar.close_time);
                     current_state = WAIT_A;
                 }
             }
             break;
     }
-
     prev_ol = ol;
     prev_sp = sp;
 }
